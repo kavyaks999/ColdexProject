@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="password">
+    <StateDefinitions>
+        <StateDefinition
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="ColdChainSD_1"
+         projectName="ColdChainMonitoringApplication1"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "comparator" : "<=",
+                "defaultStyleDefinition" : "DefaultChartStyle3",
+                "defaultValue" : "65",
+                "description" : "",
+                "displayString" : "VeryLow",
+                "name" : ""
+              }, {
+                "comparator" : "<=",
+                "defaultStyleDefinition" : "YellowStyleDefinition",
+                "defaultValue" : "85",
+                "description" : "",
+                "displayString" : "Low",
+                "name" : ""
+              }, {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "DefaultChartStyle2",
+                "defaultValue" : "95",
+                "description" : "",
+                "displayString" : "Normal",
+                "name" : ""
+              }, {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "YellowStyleDefinition",
+                "defaultValue" : "105",
+                "description" : "",
+                "displayString" : "High",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "DefaultChartStyle3",
+                "defaultValue" : "",
+                "description" : "",
+                "displayString" : "veryhigh",
+                "name" : ""
+              } ],
+              "stateType" : "numeric"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

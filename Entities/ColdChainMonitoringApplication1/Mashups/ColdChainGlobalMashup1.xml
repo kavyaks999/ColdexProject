@@ -1,0 +1,2339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="ColdChainGlobalMashup1"
+         projectName="ColdChainMonitoringApplication1"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainAdmin_1"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainSevice_1"
+                         type="Group"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainAdmin_1"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainSevice_1"
+                         type="Group"></Principal>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainAdmin_1"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainSevice_1"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainAdmin_1"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainSevice_1"
+                         type="Group"></Principal>
+                    </EventInvoke>
+                    <EventSubscribe>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainAdmin_1"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainSevice_1"
+                         type="Group"></Principal>
+                    </EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="ColdChainOrganization"
+                     type="Organization"></Principal>
+                    <Principal
+                     isPermitted="true"
+                     name="ColdChainOrganization:Administrator"
+                     type="OrganizationalUnit"></Principal>
+                    <Principal
+                     isPermitted="true"
+                     name="ColdChainOrganization:Service_Engineer"
+                     type="OrganizationalUnit"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Mashup Mobile Settings"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="MobileSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Disable Zoom"
+                             baseType="BOOLEAN"
+                             description="Disables zooming in and out within the mashup"
+                             name="disableZoom"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Full Screen Mode"
+                             baseType="BOOLEAN"
+                             description="Open the mashup in full screen mode"
+                             name="fullScreenMode"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Height"
+                             baseType="STRING"
+                             description="The height of the mashup page"
+                             name="height"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-height"
+                             aspect.friendlyName="Height Type"
+                             baseType="STRING"
+                             description="Use the height of the device display, or a custom height (in px)"
+                             name="heightType"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Initial Scale"
+                             baseType="NUMBER"
+                             description="The initial zoom scale when the mashup is loaded for the first time"
+                             name="initialScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Shortcut Icon Title"
+                             baseType="STRING"
+                             description="A title for the mashup shortcut on the iOS home screen"
+                             name="iosShortcutIconTitle"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="black-translucent"
+                             aspect.friendlyName="Status Bar Appearance"
+                             baseType="STRING"
+                             description="The style of the iOS status bar"
+                             name="iosStatusBarAppearance"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Maximum Scale"
+                             baseType="NUMBER"
+                             description="The maximum scale that users can zoom out to"
+                             name="maximumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0.1"
+                             aspect.friendlyName="Minimum Scale"
+                             baseType="NUMBER"
+                             description="The minimum scale that users can zoom out to"
+                             name="minimumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Width"
+                             baseType="STRING"
+                             description="The width of the mashup page"
+                             name="width"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-width"
+                             aspect.friendlyName="Width Type"
+                             baseType="STRING"
+                             description="Use the width of the device display, or a custom width (in px)"
+                             name="widthType"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <disableZoom>false</disableZoom>
+                            <fullScreenMode>true</fullScreenMode>
+                            <height>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </height>
+                            <heightType>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </heightType>
+                            <initialScale>1.0</initialScale>
+                            <iosShortcutIconTitle></iosShortcutIconTitle>
+                            <iosStatusBarAppearance>
+                            <![CDATA[
+                            black-translucent
+                            ]]>
+                            </iosStatusBarAppearance>
+                            <maximumScale>10.0</maximumScale>
+                            <minimumScale>0.1</minimumScale>
+                            <width>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </width>
+                            <widthType>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </widthType>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "CustomMashupCss" : ".panel .widget-panel{\n    border-radius:20px;\n    box-shadow:0px 0px 6px 0px #ccc;\n}\n.subpanel   .widget-panel{\n    border-radius:20px;\n    box-shadow:3px 3px 5px 6px #ccc;\n}",
+              "Data" : {
+                "DynamicThingTemplates_ColdChainTT_1" : {
+                  "DataName" : "DynamicThingTemplates_ColdChainTT_1",
+                  "EntityName" : "ColdChainTT_1",
+                  "EntityType" : "DynamicThingTemplates",
+                  "Id" : "5c941c31-2814-4f42-9094-0f62d74d4f01",
+                  "RefreshInterval" : 0,
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "d9d00e89-d79e-4baa-8f4a-b6fda55d3dce",
+                    "Name" : "QueryPropertyHistory",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "QueryPropertyHistory"
+                  } ]
+                },
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "ThingTemplates_ColdChainTT_1" : {
+                  "DataName" : "ThingTemplates_ColdChainTT_1",
+                  "EntityName" : "ColdChainTT_1",
+                  "EntityType" : "ThingTemplates",
+                  "Id" : "960351a6-9b79-4925-9e1a-c22dcf00a0da",
+                  "RefreshInterval" : 0,
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "05b7ffa7-31fe-43e5-a5ab-e7f1f3a00016",
+                    "Name" : "GetImplementingThingsWithData",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetImplementingThingsWithData"
+                  } ]
+                },
+                "Things_ColdChain.UtilityThing" : {
+                  "DataName" : "Things_ColdChain.UtilityThing",
+                  "EntityName" : "ColdChain.UtilityThing",
+                  "EntityType" : "Things",
+                  "Id" : "d003e9a5-76fc-426f-bcea-c49693912494",
+                  "RefreshInterval" : 0,
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "ce6db967-ed0f-44d0-9ea1-fb4a5a3722c2",
+                    "Name" : "Active",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "Active"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "8ba4a876-5be2-45a2-aab5-6bb75dbd5a9f",
+                    "Name" : "Humidity",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "Humidity"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "5def3035-e636-4b66-bc64-9c7b47e09cee",
+                    "Name" : "Inactive",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "Inactive"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "829391da-5547-423c-93d8-8702598fd107",
+                    "Name" : "Pressure",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "Pressure"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "6df84cf4-a600-430f-b9fc-5ab698fcdea2",
+                    "Name" : "Store",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "Store"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "7c88d18c-52c0-431b-90a9-d5b8b67d115a",
+                    "Name" : "Temp",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "Temp"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "9bb9aef4-04d9-4dfb-9d82-6493ac32cc39",
+                    "Name" : "Transit",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "Transit"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "aaab15a8-d020-4b2c-99a1-19b78b162968",
+                    "Name" : "Warehouse",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "Warehouse"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "3735de7a-ec9b-4653-a769-df28df5a40fe",
+                    "Name" : "QueryPropertyHistory",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "QueryPropertyHistory"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "9544641e-1f82-4758-9429-a279b88a27dd",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetImplementingThingsWithData",
+                "SourceName" : "GetImplementingThingsWithData",
+                "SourceSection" : "ThingTemplates_ColdChainTT_1",
+                "TargetArea" : "UI",
+                "TargetId" : "dhxgrid-17",
+                "TargetSection" : ""
+              }, {
+                "Id" : "ab946529-249a-4270-81c7-b76b9b8396ba",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetImplementingThingsWithData",
+                "SourceSection" : "ThingTemplates_ColdChainTT_1",
+                "TargetArea" : "UI",
+                "TargetId" : "googlemap-52",
+                "TargetSection" : ""
+              }, {
+                "Id" : "3d4501e5-41f3-47f1-870a-f9d4e861847a",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "result",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "Active",
+                "SourceSection" : "Things_ColdChain.UtilityThing",
+                "TargetArea" : "UI",
+                "TargetId" : "label-23",
+                "TargetSection" : ""
+              }, {
+                "Id" : "19a978bf-de8f-4eca-a5c2-24c751c49c10",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "result",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "Humidity",
+                "SourceSection" : "Things_ColdChain.UtilityThing",
+                "TargetArea" : "UI",
+                "TargetId" : "label-35",
+                "TargetSection" : ""
+              }, {
+                "Id" : "98a7848b-532e-4a71-a2e6-2a3eb205cedd",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "result",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "Inactive",
+                "SourceSection" : "Things_ColdChain.UtilityThing",
+                "TargetArea" : "UI",
+                "TargetId" : "label-19",
+                "TargetSection" : ""
+              }, {
+                "Id" : "6222598d-dd7f-483a-b38f-c29c0a143ac1",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "result",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "Pressure",
+                "SourceSection" : "Things_ColdChain.UtilityThing",
+                "TargetArea" : "UI",
+                "TargetId" : "label-43",
+                "TargetSection" : ""
+              }, {
+                "Id" : "627bc9dd-2134-4a67-9dd3-f9b2ab9d23d7",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "QueryPropertyHistory",
+                "SourceName" : "QueryPropertyHistory",
+                "SourceSection" : "Things_ColdChain.UtilityThing",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcschartline-50",
+                "TargetSection" : ""
+              }, {
+                "Id" : "f7aec3d5-9ffb-492c-8563-74fb9a28e271",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "result",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "Store",
+                "SourceSection" : "Things_ColdChain.UtilityThing",
+                "TargetArea" : "UI",
+                "TargetId" : "label-47",
+                "TargetSection" : ""
+              }, {
+                "Id" : "ab3198ca-f024-4e42-a599-07515b99bd98",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "result",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "Temp",
+                "SourceSection" : "Things_ColdChain.UtilityThing",
+                "TargetArea" : "UI",
+                "TargetId" : "label-39",
+                "TargetSection" : ""
+              }, {
+                "Id" : "3b830604-ccf1-442a-9e90-3cb623723e6c",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "result",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "Transit",
+                "SourceSection" : "Things_ColdChain.UtilityThing",
+                "TargetArea" : "UI",
+                "TargetId" : "label-27",
+                "TargetSection" : ""
+              }, {
+                "Id" : "c0e2befc-4299-4e8f-a5b1-830419f3812d",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "result",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "Warehouse",
+                "SourceSection" : "Things_ColdChain.UtilityThing",
+                "TargetArea" : "UI",
+                "TargetId" : "label-31",
+                "TargetSection" : ""
+              }, {
+                "Id" : "485b11ec-19e5-4b66-b955-4e935b42edfb",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "name",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "value",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "Entity"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetImplementingThingsWithData",
+                "SourceSection" : "ThingTemplates_ColdChainTT_1",
+                "TargetArea" : "Data",
+                "TargetId" : "EntityName",
+                "TargetSection" : "DynamicThingTemplates_ColdChainTT_1"
+              }, {
+                "Id" : "f3082438-5bea-4728-8abd-8ff01b7c7056",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "map",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetImplementingThingsWithData",
+                "SourceSection" : "ThingTemplates_ColdChainTT_1",
+                "TargetArea" : "UI",
+                "TargetId" : "navigation-53",
+                "TargetSection" : ""
+              }, {
+                "Id" : "6783fd00-cc69-4225-85d5-3cb693579d43",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "chart",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "QueryPropertyHistory",
+                "SourceSection" : "DynamicThingTemplates_ColdChainTT_1",
+                "TargetArea" : "UI",
+                "TargetId" : "navigation-53",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : { },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "ThingTemplates_ColdChainTT_1",
+                "EventHandlerService" : "GetImplementingThingsWithData",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "243d2f45-8f36-4414-b679-6c4f041eba30"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "navigation-53",
+                "EventHandlerService" : "Navigate",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "DoubleClicked",
+                "EventTriggerId" : "dhxgrid-17",
+                "EventTriggerSection" : "",
+                "Id" : "12a72b1a-3235-47a8-ba34-f134be7d2d89"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ColdChain.UtilityThing",
+                "EventHandlerService" : "Active",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "5746d39e-26bf-4543-a041-f4634e686055"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ColdChain.UtilityThing",
+                "EventHandlerService" : "Humidity",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "bd143922-04fe-42d4-afc1-6d5363a253fa"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ColdChain.UtilityThing",
+                "EventHandlerService" : "Inactive",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "0d01efcd-df2a-423b-98bc-eab1d79c397c"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ColdChain.UtilityThing",
+                "EventHandlerService" : "Pressure",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "ab052a04-fecb-4d22-a025-0dd72bd3a8a8"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ColdChain.UtilityThing",
+                "EventHandlerService" : "Store",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "3cf864f5-133a-467e-bd87-0a075754e0af"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ColdChain.UtilityThing",
+                "EventHandlerService" : "Temp",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "cbf8b285-ee1e-453d-acbf-79f48e8d3403"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ColdChain.UtilityThing",
+                "EventHandlerService" : "Transit",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "13af0838-2b94-4cc8-81cb-1d39cf0ddfee"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ColdChain.UtilityThing",
+                "EventHandlerService" : "Warehouse",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "dfa64c8c-fee6-429c-ae70-ec959d5d6d8f"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ColdChain.UtilityThing",
+                "EventHandlerService" : "QueryPropertyHistory",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "6bbf92a1-8237-45e3-ac14-14a9c4a6ab7c"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "navigation-53",
+                "EventHandlerService" : "Navigate",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "DoubleClicked",
+                "EventTriggerId" : "googlemap-52",
+                "EventTriggerSection" : "",
+                "Id" : "e8ccc401-47cd-4e63-841d-a0d1ff44b575"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingTemplates_ColdChainTT_1",
+                "EventHandlerService" : "QueryPropertyHistory",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "SelectedRowsChanged",
+                "EventTriggerId" : "GetImplementingThingsWithData",
+                "EventTriggerSection" : "ThingTemplates_ColdChainTT_1",
+                "Id" : "6d1391cb-fa18-474b-b465-486daa6d76af"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingTemplates_ColdChainTT_1",
+                "EventHandlerService" : "QueryPropertyHistory",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "DoubleClicked",
+                "EventTriggerId" : "dhxgrid-17",
+                "EventTriggerSection" : "",
+                "Id" : "3f0651ee-bf2c-41a2-a6e7-fea3bebf2e8b"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingTemplates_ColdChainTT_1",
+                "EventHandlerService" : "QueryPropertyHistory",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "de9f18ee-a5bf-44cd-b781-91ad9566c6e9"
+              } ],
+              "RunTimePermissions" : { },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButton" : "SimplePlus",
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImage" : "",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButton" : "SimpleGear",
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "MashupResolution" : "1366x768",
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : true,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMashupStyle",
+                  "StyleProperties" : {
+                    "data" : {
+                      "ptcsbutton-10" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#0f123f",
+                              "border-color" : "#0f123f"
+                            },
+                            "focus" : {
+                              "background" : "#ee786c"
+                            },
+                            "hover" : {
+                              "background" : "#ee786c",
+                              "border-color" : "#efe6d0",
+                              "border-width" : "0px",
+                              "color" : "rgba(255,255,255,1)"
+                            },
+                            "pressed" : {
+                              "background" : "#ee786c"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-button"
+                      },
+                      "ptcsbutton-9" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#0f123f",
+                              "border-color" : "#0f123f",
+                              "font-family" : "Helvetica"
+                            },
+                            "focus" : {
+                              "background" : "#ee786c"
+                            },
+                            "hover" : {
+                              "background" : "#ee786c",
+                              "border-color" : "#efe6d0",
+                              "border-width" : "0px",
+                              "color" : "rgba(255,255,255,1)",
+                              "font-family" : "Helvetica"
+                            },
+                            "pressed" : {
+                              "background" : "#ee786c"
+                            }
+                          },
+                          "icon" : {
+                            "pressed" : {
+                              "color" : "rgba(0,0,0,1)"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-button"
+                      }
+                    },
+                    "meta" : {
+                      "type" : "WidgetStyler",
+                      "version" : "1.0"
+                    }
+                  },
+                  "StyleTheme" : "PTC Convergence Theme",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "UseMasterTheme" : false,
+                  "UseTheme" : false,
+                  "UseThemeForHybrids" : false,
+                  "Visible" : true,
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "id_index" : 54,
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "container-2",
+                    "EnableExpandCollapse" : false,
+                    "ExpandCollapseTabLocation" : "inside",
+                    "Expanded" : true,
+                    "Id" : "flexcontainer-2",
+                    "LastContainer" : true,
+                    "Overlay" : false,
+                    "ResponsiveLayout" : true,
+                    "ShowDataLoading" : true,
+                    "ShowExpandCollapseTab" : false,
+                    "SourceURL" : "",
+                    "Style" : "DefaultContainerStyle",
+                    "StyleProperties" : { },
+                    "Type" : "flexcontainer",
+                    "UseTheme" : true,
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Responsive Container",
+                    "align-content" : "flex-start",
+                    "align-items" : "flex-start",
+                    "flex-basis" : "auto",
+                    "flex-direction" : "row",
+                    "flex-grow" : 1,
+                    "flex-max-height" : "",
+                    "flex-max-width" : "",
+                    "flex-min-height" : "",
+                    "flex-min-width" : "",
+                    "flex-shrink" : 1,
+                    "flex-size" : "default",
+                    "flex-wrap" : "nowrap",
+                    "iconClass" : "widgets-flexcontainer",
+                    "justify-content" : "flex-start",
+                    "positioning" : "responsive",
+                    "userCannotRemove" : true
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "ContainerClass" : "",
+                      "CustomClass" : "panel",
+                      "DisplayName" : "panel-3",
+                      "Height" : 0,
+                      "HideScrollbars" : false,
+                      "HorizontalAnchor" : "left",
+                      "Id" : "panel-3",
+                      "LastContainer" : false,
+                      "Left" : 114.00567626953125,
+                      "ResponsiveLayout" : true,
+                      "ShowDataLoading" : true,
+                      "Style" : "WhiteBackgroundPanel",
+                      "Top" : 96.13636779785156,
+                      "Type" : "panel",
+                      "VerticalAnchor" : "top",
+                      "Visible" : true,
+                      "Width" : 0,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Panel"
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "ContainerClass" : "",
+                        "DisplayName" : "panel-6",
+                        "Height" : 766,
+                        "HideScrollbars" : true,
+                        "HorizontalAnchor" : "left",
+                        "Id" : "panel-6",
+                        "LastContainer" : false,
+                        "Left" : 0,
+                        "ResponsiveLayout" : false,
+                        "ShowDataLoading" : true,
+                        "Style" : "BlueBackgroundPanel",
+                        "Top" : 0,
+                        "Type" : "panel",
+                        "VerticalAnchor" : "top",
+                        "Visible" : true,
+                        "Width" : 1364,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Panel"
+                      },
+                      "Widgets" : [ {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "ContainerClass" : "",
+                          "CustomClass" : "panel",
+                          "DisplayName" : "panel-8",
+                          "Height" : 772,
+                          "HideScrollbars" : false,
+                          "HorizontalAnchor" : "left",
+                          "Id" : "panel-8",
+                          "LastContainer" : false,
+                          "Left" : 169,
+                          "ResponsiveLayout" : false,
+                          "ShowDataLoading" : true,
+                          "Style" : "BodyPanel",
+                          "Top" : 0,
+                          "Type" : "panel",
+                          "VerticalAnchor" : "top",
+                          "Visible" : true,
+                          "Width" : 1305,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Panel"
+                        },
+                        "Widgets" : [ {
+                          "Properties" : {
+                            "Area" : "UI",
+                            "ContainerClass" : "",
+                            "CustomClass" : "subpanel",
+                            "DisplayName" : "panel-11",
+                            "Height" : 300,
+                            "HideScrollbars" : true,
+                            "HorizontalAnchor" : "left",
+                            "Id" : "panel-11",
+                            "LastContainer" : false,
+                            "Left" : 10,
+                            "ResponsiveLayout" : false,
+                            "ShowDataLoading" : true,
+                            "Style" : "WhiteBackgroundPanel",
+                            "Top" : 30,
+                            "Type" : "panel",
+                            "VerticalAnchor" : "top",
+                            "Visible" : true,
+                            "Width" : 550,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Panel"
+                          },
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "AlignHeader" : false,
+                              "Area" : "UI",
+                              "AutoSelectFirstRow" : false,
+                              "CellTextWrapping" : false,
+                              "ColumnFormat" : {
+                                "formatInfo" : [ {
+                                  "Align" : "center",
+                                  "AllowEdit" : false,
+                                  "Description" : "",
+                                  "FieldName" : "TruckId",
+                                  "FormatOptions" : {
+                                    "FormatString" : "full",
+                                    "formatInfo" : {
+                                      "StateFormats" : [ ]
+                                    },
+                                    "formatText" : "View",
+                                    "renderer" : "STRING",
+                                    "roundingEnabled" : true,
+                                    "showDependentField" : false
+                                  },
+                                  "Title" : "Truck ID",
+                                  "ValidationExpression" : "",
+                                  "ValidationMessage" : "",
+                                  "Width" : "102px",
+                                  "headerTextAlignment" : "center",
+                                  "hidden" : false,
+                                  "inLayout" : true
+                                }, {
+                                  "Align" : "center",
+                                  "AllowEdit" : false,
+                                  "Description" : "",
+                                  "FieldName" : "Model",
+                                  "FormatOptions" : {
+                                    "FormatString" : "full",
+                                    "formatInfo" : {
+                                      "StateFormats" : [ ]
+                                    },
+                                    "formatText" : "View",
+                                    "renderer" : "STRING",
+                                    "roundingEnabled" : true,
+                                    "showDependentField" : false
+                                  },
+                                  "Title" : "Model",
+                                  "ValidationExpression" : "",
+                                  "ValidationMessage" : "",
+                                  "Width" : "auto",
+                                  "headerTextAlignment" : "center",
+                                  "hidden" : false,
+                                  "inLayout" : true
+                                }, {
+                                  "Align" : "center",
+                                  "AllowEdit" : false,
+                                  "Description" : "",
+                                  "FieldName" : "RegNo",
+                                  "FormatOptions" : {
+                                    "FormatString" : "full",
+                                    "formatInfo" : {
+                                      "StateFormats" : [ ]
+                                    },
+                                    "formatText" : "View",
+                                    "renderer" : "STRING",
+                                    "roundingEnabled" : true,
+                                    "showDependentField" : false
+                                  },
+                                  "Title" : "Reg No.",
+                                  "ValidationExpression" : "",
+                                  "ValidationMessage" : "",
+                                  "Width" : "auto",
+                                  "headerTextAlignment" : "center",
+                                  "hidden" : false,
+                                  "inLayout" : true
+                                }, {
+                                  "Align" : "center",
+                                  "AllowEdit" : false,
+                                  "Description" : "",
+                                  "FieldName" : "SerialNumber",
+                                  "FormatOptions" : {
+                                    "FormatString" : "full",
+                                    "formatInfo" : {
+                                      "StateFormats" : [ ]
+                                    },
+                                    "formatText" : "View",
+                                    "renderer" : "STRING",
+                                    "roundingEnabled" : true,
+                                    "showDependentField" : false
+                                  },
+                                  "Title" : "Serial Number",
+                                  "ValidationExpression" : "",
+                                  "ValidationMessage" : "",
+                                  "Width" : "auto",
+                                  "headerTextAlignment" : "center",
+                                  "hidden" : false,
+                                  "inLayout" : true
+                                }, {
+                                  "Align" : "center",
+                                  "AllowEdit" : false,
+                                  "Description" : "",
+                                  "FieldName" : "Status",
+                                  "FormatOptions" : {
+                                    "FormatString" : "",
+                                    "formatInfo" : {
+                                      "StateFormats" : [ ]
+                                    },
+                                    "formatText" : "View",
+                                    "renderer" : "STRING",
+                                    "roundingEnabled" : true,
+                                    "showDependentField" : false
+                                  },
+                                  "Title" : "Status",
+                                  "ValidationExpression" : "",
+                                  "ValidationMessage" : "",
+                                  "Width" : "102px",
+                                  "headerTextAlignment" : "center",
+                                  "hidden" : false,
+                                  "inLayout" : true
+                                } ]
+                              },
+                              "CurrentScrollTop" : 0,
+                              "DisplayName" : "dhxgrid-17",
+                              "FocusStyle" : "DefaultFocusStyle",
+                              "GridBackgroundStyle" : "WhiteBackgroundPanel",
+                              "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+                              "GridHeaderStyle" : "BlueBackgroundPanel",
+                              "GridHeaderTextCase" : "capitalize",
+                              "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+                              "Height" : 293,
+                              "Id" : "dhxgrid-17",
+                              "IsEditable" : false,
+                              "IsPrintLayout" : false,
+                              "LastContainer" : false,
+                              "Left" : 5,
+                              "MultiSelect" : false,
+                              "ResponsiveLayout" : false,
+                              "RowAlternateBackgroundStyle" : "WhiteBackgroundPanel",
+                              "RowBackgroundStyle" : "WhiteBackgroundPanel",
+                              "RowFormat_StateParameters" : [ ],
+                              "RowHeight" : 30,
+                              "RowHoverStyle" : "SubPanel",
+                              "RowSelectedStyle" : "SubPanel",
+                              "ScrollTop" : 0,
+                              "ShowAllColumns" : false,
+                              "ShowDataLoading" : true,
+                              "TabSequence" : 0,
+                              "Top" : 2,
+                              "Type" : "dhxgrid",
+                              "Visible" : true,
+                              "Width" : 533,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Grid"
+                            },
+                            "Widgets" : [ ]
+                          } ]
+                        }, {
+                          "Properties" : {
+                            "Area" : "UI",
+                            "ContainerClass" : "",
+                            "CustomClass" : "subpanel",
+                            "DisplayName" : "panel-12",
+                            "Height" : 400,
+                            "HideScrollbars" : false,
+                            "HorizontalAnchor" : "left",
+                            "Id" : "panel-12",
+                            "LastContainer" : false,
+                            "Left" : 10,
+                            "ResponsiveLayout" : false,
+                            "ShowDataLoading" : true,
+                            "Style" : "WhiteBackgroundPanel",
+                            "Top" : 350,
+                            "Type" : "panel",
+                            "VerticalAnchor" : "top",
+                            "Visible" : true,
+                            "Width" : 550,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Panel"
+                          },
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "Area" : "UI",
+                              "AutoCenterBehavior" : "last-selected",
+                              "AutoZoomBehavior" : "every-data-change",
+                              "ClusterLocations" : false,
+                              "DisplayName" : "googlemap-52",
+                              "EnableLocationSelection" : false,
+                              "EnableMarkerSelection" : true,
+                              "EnableRegionSelection" : false,
+                              "EndMarkerStyle" : "DefaultMapEndStyle",
+                              "Height" : 400,
+                              "Id" : "googlemap-52",
+                              "LastContainer" : false,
+                              "Left" : 0,
+                              "LocationField" : "TruckLocation",
+                              "MapSkin" : "normal",
+                              "MapType" : "roadmap",
+                              "MarkerField" : "",
+                              "MarkerFormatting_StateParameters" : [ ],
+                              "MarkerStyle" : "DefaultMapMarkerStyle",
+                              "MashupParameters" : [ ],
+                              "MultiSelect" : false,
+                              "PathStyle" : "DefaultMapPathStyle",
+                              "PlannedRouteLocationField" : "location",
+                              "PlannedRouteStyle" : "DefaultMapRouteStyle",
+                              "RegionFillOpacity" : 1,
+                              "RegionFormatting_StateParameters" : [ ],
+                              "RegionLocationField" : "location",
+                              "RegionLocationsField" : "locations",
+                              "RegionMultiSelect" : false,
+                              "RegionStyle" : "DefaultMapRegionStyle",
+                              "ResponsiveLayout" : false,
+                              "RouteLocationField" : "location",
+                              "RouteStyle" : "DefaultMapRouteStyle",
+                              "SelectedMarkerStyle" : "DefaultMapSelectedStyle",
+                              "SelectedRegionStyle" : "DefaultMapRegionSelectedStyle",
+                              "SelectionMarkerStyle" : "DefaultMapSelectionStyle",
+                              "ShowDataLoading" : true,
+                              "ShowEndMarker" : true,
+                              "ShowMarkerTooltips" : true,
+                              "ShowMarkers" : true,
+                              "ShowPathBetweenMarkers" : false,
+                              "ShowPlannedRoute" : false,
+                              "ShowRegionTooltips" : false,
+                              "ShowRegions" : false,
+                              "ShowRoute" : false,
+                              "ShowSelectionMarker" : false,
+                              "ShowStartMarker" : true,
+                              "ShowTraffic" : false,
+                              "StartMarkerStyle" : "DefaultMapStartStyle",
+                              "TooltipMashupHeight" : 300,
+                              "TooltipMashupName" : "",
+                              "TooltipMashupWidth" : 400,
+                              "Top" : 0,
+                              "Type" : "googlemap",
+                              "Visible" : true,
+                              "Width" : 550,
+                              "Z-index" : 10,
+                              "Zoom" : 8,
+                              "__TypeDisplayName" : "Google Map"
+                            },
+                            "Widgets" : [ ]
+                          } ]
+                        }, {
+                          "Properties" : {
+                            "Area" : "UI",
+                            "ContainerClass" : "",
+                            "DisplayName" : "panel-15",
+                            "Height" : 145,
+                            "HideScrollbars" : false,
+                            "HorizontalAnchor" : "left",
+                            "Id" : "panel-15",
+                            "LastContainer" : false,
+                            "Left" : 726,
+                            "ResponsiveLayout" : false,
+                            "ShowDataLoading" : true,
+                            "Style" : "SubPanel",
+                            "Top" : 30,
+                            "Type" : "panel",
+                            "VerticalAnchor" : "top",
+                            "Visible" : true,
+                            "Width" : 146,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Panel"
+                          },
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "AlternateText" : "",
+                              "Area" : "UI",
+                              "DisplayName" : "ptcs-image-18",
+                              "Height" : 70,
+                              "Id" : "ptcsimage-18",
+                              "LastContainer" : false,
+                              "Left" : 10,
+                              "Position" : "top",
+                              "PreventCaching" : false,
+                              "ResponsiveLayout" : false,
+                              "Scaling" : "fit-x",
+                              "ShowDataLoading" : true,
+                              "SourceURL" : "/Thingworx/MediaEntities/ColdChainInactiveTruckIcon",
+                              "Top" : 50,
+                              "Type" : "ptcsimage",
+                              "UseTheme" : true,
+                              "Visible" : true,
+                              "Width" : 70,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Image"
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Alignment" : "center",
+                              "AllowEllipsis" : false,
+                              "Area" : "UI",
+                              "DisplayName" : "label-19",
+                              "Height" : 32,
+                              "Id" : "label-19",
+                              "LastContainer" : false,
+                              "Left" : 79,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Style" : "ColdChainCardLabelStyle",
+                              "ToolTipField" : "",
+                              "ToolTipStyle" : "DefaultTooltipStyle",
+                              "Top" : 64,
+                              "Type" : "label",
+                              "Visible" : true,
+                              "Width" : 60,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "__supportsTooltip" : true
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Alignment" : "left",
+                              "AllowEllipsis" : false,
+                              "Area" : "UI",
+                              "DisplayName" : "label-20",
+                              "Height" : 16,
+                              "Id" : "label-20",
+                              "LastContainer" : false,
+                              "Left" : 16,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Style" : "ColdChainCardLabelStyle",
+                              "Text" : "Inactive Truck",
+                              "ToolTipField" : "",
+                              "ToolTipStyle" : "DefaultTooltipStyle",
+                              "Top" : 20,
+                              "Type" : "label",
+                              "Visible" : true,
+                              "Width" : 110,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "__supportsTooltip" : true
+                            },
+                            "Widgets" : [ ]
+                          } ]
+                        }, {
+                          "Properties" : {
+                            "Area" : "UI",
+                            "ContainerClass" : "",
+                            "DisplayName" : "panel-21",
+                            "Height" : 145,
+                            "HideScrollbars" : false,
+                            "HorizontalAnchor" : "left",
+                            "Id" : "panel-21",
+                            "LastContainer" : false,
+                            "Left" : 570,
+                            "ResponsiveLayout" : false,
+                            "ShowDataLoading" : true,
+                            "Style" : "SubPanel",
+                            "Top" : 30,
+                            "Type" : "panel",
+                            "VerticalAnchor" : "top",
+                            "Visible" : true,
+                            "Width" : 146,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Panel"
+                          },
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "AlternateText" : "",
+                              "Area" : "UI",
+                              "DisplayName" : "ptcs-image-22",
+                              "Height" : 65,
+                              "Id" : "ptcsimage-22",
+                              "LastContainer" : false,
+                              "Left" : 10,
+                              "Position" : "top",
+                              "PreventCaching" : false,
+                              "ResponsiveLayout" : false,
+                              "Scaling" : "fit-x",
+                              "ShowDataLoading" : true,
+                              "SourceURL" : "/Thingworx/MediaEntities/ColdChainActiveTruck",
+                              "Top" : 53,
+                              "Type" : "ptcsimage",
+                              "UseTheme" : true,
+                              "Visible" : true,
+                              "Width" : 60,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Image"
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Alignment" : "center",
+                              "AllowEllipsis" : false,
+                              "Area" : "UI",
+                              "DisplayName" : "label-23",
+                              "Height" : 32,
+                              "Id" : "label-23",
+                              "LastContainer" : false,
+                              "Left" : 79,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Style" : "ColdChainCardLabelStyle",
+                              "ToolTipField" : "",
+                              "ToolTipStyle" : "DefaultTooltipStyle",
+                              "Top" : 64,
+                              "Type" : "label",
+                              "Visible" : true,
+                              "Width" : 60,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "__supportsTooltip" : true
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Alignment" : "left",
+                              "AllowEllipsis" : false,
+                              "Area" : "UI",
+                              "DisplayName" : "label-24",
+                              "Height" : 16,
+                              "Id" : "label-24",
+                              "LastContainer" : false,
+                              "Left" : 16,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Style" : "ColdChainCardLabelStyle",
+                              "Text" : "Active Truck",
+                              "ToolTipField" : "",
+                              "ToolTipStyle" : "DefaultTooltipStyle",
+                              "Top" : 20,
+                              "Type" : "label",
+                              "Visible" : true,
+                              "Width" : 110,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "__supportsTooltip" : true
+                            },
+                            "Widgets" : [ ]
+                          } ]
+                        }, {
+                          "Properties" : {
+                            "Area" : "UI",
+                            "ContainerClass" : "",
+                            "DisplayName" : "panel-25",
+                            "Height" : 145,
+                            "HideScrollbars" : false,
+                            "HorizontalAnchor" : "left",
+                            "Id" : "panel-25",
+                            "LastContainer" : false,
+                            "Left" : 882,
+                            "ResponsiveLayout" : false,
+                            "ShowDataLoading" : true,
+                            "Style" : "SubPanel",
+                            "Top" : 30,
+                            "Type" : "panel",
+                            "VerticalAnchor" : "top",
+                            "Visible" : true,
+                            "Width" : 146,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Panel"
+                          },
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "AlternateText" : "",
+                              "Area" : "UI",
+                              "DisplayName" : "ptcs-image-26",
+                              "Height" : 65,
+                              "Id" : "ptcsimage-26",
+                              "LastContainer" : false,
+                              "Left" : 10,
+                              "Position" : "top",
+                              "PreventCaching" : false,
+                              "ResponsiveLayout" : false,
+                              "Scaling" : "fit-x",
+                              "ShowDataLoading" : true,
+                              "SourceURL" : "/Thingworx/MediaEntities/ColdChainActiveTruck",
+                              "Top" : 53,
+                              "Type" : "ptcsimage",
+                              "UseTheme" : true,
+                              "Visible" : true,
+                              "Width" : 60,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Image"
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Alignment" : "center",
+                              "AllowEllipsis" : false,
+                              "Area" : "UI",
+                              "DisplayName" : "label-27",
+                              "Height" : 32,
+                              "Id" : "label-27",
+                              "LastContainer" : false,
+                              "Left" : 79,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Style" : "ColdChainCardLabelStyle",
+                              "ToolTipField" : "",
+                              "ToolTipStyle" : "DefaultTooltipStyle",
+                              "Top" : 64,
+                              "Type" : "label",
+                              "Visible" : true,
+                              "Width" : 60,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "__supportsTooltip" : true
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Alignment" : "left",
+                              "AllowEllipsis" : false,
+                              "Area" : "UI",
+                              "DisplayName" : "label-28",
+                              "Height" : 16,
+                              "Id" : "label-28",
+                              "LastContainer" : false,
+                              "Left" : 16,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Style" : "ColdChainCardLabelStyle",
+                              "Text" : "In Transit",
+                              "ToolTipField" : "",
+                              "ToolTipStyle" : "DefaultTooltipStyle",
+                              "Top" : 20,
+                              "Type" : "label",
+                              "Visible" : true,
+                              "Width" : 110,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "__supportsTooltip" : true
+                            },
+                            "Widgets" : [ ]
+                          } ]
+                        }, {
+                          "Properties" : {
+                            "Area" : "UI",
+                            "ContainerClass" : "",
+                            "DisplayName" : "panel-29",
+                            "Height" : 145,
+                            "HideScrollbars" : false,
+                            "HorizontalAnchor" : "left",
+                            "Id" : "panel-29",
+                            "LastContainer" : false,
+                            "Left" : 1038,
+                            "ResponsiveLayout" : false,
+                            "ShowDataLoading" : true,
+                            "Style" : "SubPanel",
+                            "Top" : 30,
+                            "Type" : "panel",
+                            "VerticalAnchor" : "top",
+                            "Visible" : true,
+                            "Width" : 146,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Panel"
+                          },
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "AlternateText" : "",
+                              "Area" : "UI",
+                              "DisplayName" : "ptcs-image-30",
+                              "Height" : 65,
+                              "Id" : "ptcsimage-30",
+                              "LastContainer" : false,
+                              "Left" : 10,
+                              "Position" : "top",
+                              "PreventCaching" : false,
+                              "ResponsiveLayout" : false,
+                              "Scaling" : "fit-x",
+                              "ShowDataLoading" : true,
+                              "SourceURL" : "/Thingworx/MediaEntities/ColdChainActiveTruck",
+                              "Top" : 53,
+                              "Type" : "ptcsimage",
+                              "UseTheme" : true,
+                              "Visible" : true,
+                              "Width" : 60,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Image"
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Alignment" : "center",
+                              "AllowEllipsis" : false,
+                              "Area" : "UI",
+                              "DisplayName" : "label-31",
+                              "Height" : 32,
+                              "Id" : "label-31",
+                              "LastContainer" : false,
+                              "Left" : 79,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Style" : "ColdChainCardLabelStyle",
+                              "ToolTipField" : "",
+                              "ToolTipStyle" : "DefaultTooltipStyle",
+                              "Top" : 64,
+                              "Type" : "label",
+                              "Visible" : true,
+                              "Width" : 60,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "__supportsTooltip" : true
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Alignment" : "left",
+                              "AllowEllipsis" : false,
+                              "Area" : "UI",
+                              "DisplayName" : "label-32",
+                              "Height" : 16,
+                              "Id" : "label-32",
+                              "LastContainer" : false,
+                              "Left" : 16,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Style" : "ColdChainCardLabelStyle",
+                              "Text" : "In Warehouse",
+                              "ToolTipField" : "",
+                              "ToolTipStyle" : "DefaultTooltipStyle",
+                              "Top" : 20,
+                              "Type" : "label",
+                              "Visible" : true,
+                              "Width" : 110,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "__supportsTooltip" : true
+                            },
+                            "Widgets" : [ ]
+                          } ]
+                        }, {
+                          "Properties" : {
+                            "Area" : "UI",
+                            "ContainerClass" : "",
+                            "DisplayName" : "panel-33",
+                            "Height" : 145,
+                            "HideScrollbars" : false,
+                            "HorizontalAnchor" : "left",
+                            "Id" : "panel-33",
+                            "LastContainer" : false,
+                            "Left" : 570,
+                            "ResponsiveLayout" : false,
+                            "ShowDataLoading" : true,
+                            "Style" : "SubPanel",
+                            "Top" : 185,
+                            "Type" : "panel",
+                            "VerticalAnchor" : "top",
+                            "Visible" : true,
+                            "Width" : 146,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Panel"
+                          },
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "AlternateText" : "",
+                              "Area" : "UI",
+                              "DisplayName" : "ptcs-image-34",
+                              "Height" : 65,
+                              "Id" : "ptcsimage-34",
+                              "LastContainer" : false,
+                              "Left" : 10,
+                              "Position" : "top",
+                              "PreventCaching" : false,
+                              "ResponsiveLayout" : false,
+                              "Scaling" : "fit-x",
+                              "ShowDataLoading" : true,
+                              "SourceURL" : "/Thingworx/MediaEntities/ColdChainActiveTruck",
+                              "Top" : 53,
+                              "Type" : "ptcsimage",
+                              "UseTheme" : true,
+                              "Visible" : true,
+                              "Width" : 60,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Image"
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Alignment" : "center",
+                              "AllowEllipsis" : false,
+                              "Area" : "UI",
+                              "DisplayName" : "label-35",
+                              "Height" : 32,
+                              "Id" : "label-35",
+                              "LastContainer" : false,
+                              "Left" : 79,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Style" : "ColdChainCardLabelStyle",
+                              "ToolTipField" : "",
+                              "ToolTipStyle" : "DefaultTooltipStyle",
+                              "Top" : 64,
+                              "Type" : "label",
+                              "Visible" : true,
+                              "Width" : 60,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "__supportsTooltip" : true
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Alignment" : "left",
+                              "AllowEllipsis" : false,
+                              "Area" : "UI",
+                              "DisplayName" : "label-36",
+                              "Height" : 16,
+                              "Id" : "label-36",
+                              "LastContainer" : false,
+                              "Left" : 16,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Style" : "ColdChainCardLabelStyle",
+                              "Text" : "Humidity Issues",
+                              "ToolTipField" : "",
+                              "ToolTipStyle" : "DefaultTooltipStyle",
+                              "Top" : 20,
+                              "Type" : "label",
+                              "Visible" : true,
+                              "Width" : 125,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "__supportsTooltip" : true
+                            },
+                            "Widgets" : [ ]
+                          } ]
+                        }, {
+                          "Properties" : {
+                            "Area" : "UI",
+                            "ContainerClass" : "",
+                            "DisplayName" : "panel-37",
+                            "Height" : 145,
+                            "HideScrollbars" : true,
+                            "HorizontalAnchor" : "left",
+                            "Id" : "panel-37",
+                            "LastContainer" : false,
+                            "Left" : 726,
+                            "ResponsiveLayout" : false,
+                            "ShowDataLoading" : true,
+                            "Style" : "SubPanel",
+                            "Top" : 185,
+                            "Type" : "panel",
+                            "VerticalAnchor" : "top",
+                            "Visible" : true,
+                            "Width" : 146,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Panel"
+                          },
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "AlternateText" : "",
+                              "Area" : "UI",
+                              "DisplayName" : "ptcs-image-38",
+                              "Height" : 65,
+                              "Id" : "ptcsimage-38",
+                              "LastContainer" : false,
+                              "Left" : 10,
+                              "Position" : "top",
+                              "PreventCaching" : false,
+                              "ResponsiveLayout" : false,
+                              "Scaling" : "fit-x",
+                              "ShowDataLoading" : true,
+                              "SourceURL" : "/Thingworx/MediaEntities/ColdChainActiveTruck",
+                              "Top" : 53,
+                              "Type" : "ptcsimage",
+                              "UseTheme" : true,
+                              "Visible" : true,
+                              "Width" : 60,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Image"
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Alignment" : "center",
+                              "AllowEllipsis" : false,
+                              "Area" : "UI",
+                              "DisplayName" : "label-39",
+                              "Height" : 32,
+                              "Id" : "label-39",
+                              "LastContainer" : false,
+                              "Left" : 79,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Style" : "ColdChainCardLabelStyle",
+                              "ToolTipField" : "",
+                              "ToolTipStyle" : "DefaultTooltipStyle",
+                              "Top" : 64,
+                              "Type" : "label",
+                              "Visible" : true,
+                              "Width" : 60,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "__supportsTooltip" : true
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Alignment" : "left",
+                              "AllowEllipsis" : false,
+                              "Area" : "UI",
+                              "DisplayName" : "label-40",
+                              "Height" : 16,
+                              "Id" : "label-40",
+                              "LastContainer" : false,
+                              "Left" : 11,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Style" : "ColdChainCardLabelStyle",
+                              "Text" : "Temperature Issues",
+                              "ToolTipField" : "",
+                              "ToolTipStyle" : "DefaultTooltipStyle",
+                              "Top" : 20,
+                              "Type" : "label",
+                              "Visible" : true,
+                              "Width" : 140,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "__supportsTooltip" : true
+                            },
+                            "Widgets" : [ ]
+                          } ]
+                        }, {
+                          "Properties" : {
+                            "Area" : "UI",
+                            "ContainerClass" : "",
+                            "DisplayName" : "panel-41",
+                            "Height" : 145,
+                            "HideScrollbars" : false,
+                            "HorizontalAnchor" : "left",
+                            "Id" : "panel-41",
+                            "LastContainer" : false,
+                            "Left" : 882,
+                            "ResponsiveLayout" : false,
+                            "ShowDataLoading" : true,
+                            "Style" : "SubPanel",
+                            "Top" : 185,
+                            "Type" : "panel",
+                            "VerticalAnchor" : "top",
+                            "Visible" : true,
+                            "Width" : 146,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Panel"
+                          },
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "AlternateText" : "",
+                              "Area" : "UI",
+                              "DisplayName" : "ptcs-image-42",
+                              "Height" : 65,
+                              "Id" : "ptcsimage-42",
+                              "LastContainer" : false,
+                              "Left" : 10,
+                              "Position" : "top",
+                              "PreventCaching" : false,
+                              "ResponsiveLayout" : false,
+                              "Scaling" : "fit-x",
+                              "ShowDataLoading" : true,
+                              "SourceURL" : "/Thingworx/MediaEntities/ColdChainActiveTruck",
+                              "Top" : 53,
+                              "Type" : "ptcsimage",
+                              "UseTheme" : true,
+                              "Visible" : true,
+                              "Width" : 60,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Image"
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Alignment" : "center",
+                              "AllowEllipsis" : false,
+                              "Area" : "UI",
+                              "DisplayName" : "label-43",
+                              "Height" : 32,
+                              "Id" : "label-43",
+                              "LastContainer" : false,
+                              "Left" : 79,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Style" : "ColdChainCardLabelStyle",
+                              "ToolTipField" : "",
+                              "ToolTipStyle" : "DefaultTooltipStyle",
+                              "Top" : 64,
+                              "Type" : "label",
+                              "Visible" : true,
+                              "Width" : 60,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "__supportsTooltip" : true
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Alignment" : "left",
+                              "AllowEllipsis" : false,
+                              "Area" : "UI",
+                              "DisplayName" : "label-44",
+                              "Height" : 16,
+                              "Id" : "label-44",
+                              "LastContainer" : false,
+                              "Left" : 16,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Style" : "ColdChainCardLabelStyle",
+                              "Text" : "Pressure Issues",
+                              "ToolTipField" : "",
+                              "ToolTipStyle" : "DefaultTooltipStyle",
+                              "Top" : 20,
+                              "Type" : "label",
+                              "Visible" : true,
+                              "Width" : 110,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "__supportsTooltip" : true
+                            },
+                            "Widgets" : [ ]
+                          } ]
+                        }, {
+                          "Properties" : {
+                            "Area" : "UI",
+                            "ContainerClass" : "",
+                            "DisplayName" : "panel-45",
+                            "Height" : 145,
+                            "HideScrollbars" : false,
+                            "HorizontalAnchor" : "left",
+                            "Id" : "panel-45",
+                            "LastContainer" : false,
+                            "Left" : 1038,
+                            "ResponsiveLayout" : false,
+                            "ShowDataLoading" : true,
+                            "Style" : "SubPanel",
+                            "Top" : 185,
+                            "Type" : "panel",
+                            "VerticalAnchor" : "top",
+                            "Visible" : true,
+                            "Width" : 146,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Panel"
+                          },
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "AlternateText" : "",
+                              "Area" : "UI",
+                              "DisplayName" : "ptcs-image-46",
+                              "Height" : 65,
+                              "Id" : "ptcsimage-46",
+                              "LastContainer" : false,
+                              "Left" : 10,
+                              "Position" : "top",
+                              "PreventCaching" : false,
+                              "ResponsiveLayout" : false,
+                              "Scaling" : "fit-x",
+                              "ShowDataLoading" : true,
+                              "SourceURL" : "/Thingworx/MediaEntities/ColdChainActiveTruck",
+                              "Top" : 53,
+                              "Type" : "ptcsimage",
+                              "UseTheme" : true,
+                              "Visible" : true,
+                              "Width" : 60,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Image"
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Alignment" : "center",
+                              "AllowEllipsis" : false,
+                              "Area" : "UI",
+                              "DisplayName" : "label-47",
+                              "Height" : 32,
+                              "Id" : "label-47",
+                              "LastContainer" : false,
+                              "Left" : 79,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Style" : "ColdChainCardLabelStyle",
+                              "ToolTipField" : "",
+                              "ToolTipStyle" : "DefaultTooltipStyle",
+                              "Top" : 64,
+                              "Type" : "label",
+                              "Visible" : true,
+                              "Width" : 60,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "__supportsTooltip" : true
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "Alignment" : "left",
+                              "AllowEllipsis" : false,
+                              "Area" : "UI",
+                              "DisplayName" : "label-48",
+                              "Height" : 16,
+                              "Id" : "label-48",
+                              "LastContainer" : false,
+                              "Left" : 16,
+                              "ResponsiveLayout" : false,
+                              "ShowDataLoading" : true,
+                              "Style" : "ColdChainCardLabelStyle",
+                              "Text" : "In Store",
+                              "ToolTipField" : "",
+                              "ToolTipStyle" : "DefaultTooltipStyle",
+                              "Top" : 20,
+                              "Type" : "label",
+                              "Visible" : true,
+                              "Width" : 110,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Label",
+                              "__supportsTooltip" : true
+                            },
+                            "Widgets" : [ ]
+                          } ]
+                        }, {
+                          "Properties" : {
+                            "Area" : "UI",
+                            "ContainerClass" : "",
+                            "CustomClass" : "subpanel",
+                            "DisplayName" : "panel-49",
+                            "Height" : 400,
+                            "HideScrollbars" : false,
+                            "HorizontalAnchor" : "left",
+                            "Id" : "panel-49",
+                            "LastContainer" : false,
+                            "Left" : 570,
+                            "ResponsiveLayout" : false,
+                            "ShowDataLoading" : true,
+                            "Style" : "WhiteBackgroundPanel",
+                            "Top" : 350,
+                            "Type" : "panel",
+                            "VerticalAnchor" : "top",
+                            "Visible" : true,
+                            "Width" : 614,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Panel"
+                          },
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "Area" : "UI",
+                              "ChartType" : "linechart",
+                              "CurveFitting" : "linear",
+                              "DataField1" : "active",
+                              "DataField2" : "inactive",
+                              "DataPointSelection" : "auto",
+                              "DataSeriesStyle10_StateParameters" : [ ],
+                              "DataSeriesStyle11_StateParameters" : [ ],
+                              "DataSeriesStyle12_StateParameters" : [ ],
+                              "DataSeriesStyle13_StateParameters" : [ ],
+                              "DataSeriesStyle14_StateParameters" : [ ],
+                              "DataSeriesStyle15_StateParameters" : [ ],
+                              "DataSeriesStyle16_StateParameters" : [ ],
+                              "DataSeriesStyle17_StateParameters" : [ ],
+                              "DataSeriesStyle18_StateParameters" : [ ],
+                              "DataSeriesStyle19_StateParameters" : [ ],
+                              "DataSeriesStyle1_StateParameters" : [ ],
+                              "DataSeriesStyle20_StateParameters" : [ ],
+                              "DataSeriesStyle21_StateParameters" : [ ],
+                              "DataSeriesStyle22_StateParameters" : [ ],
+                              "DataSeriesStyle23_StateParameters" : [ ],
+                              "DataSeriesStyle24_StateParameters" : [ ],
+                              "DataSeriesStyle2_StateParameters" : [ ],
+                              "DataSeriesStyle3_StateParameters" : [ ],
+                              "DataSeriesStyle4_StateParameters" : [ ],
+                              "DataSeriesStyle5_StateParameters" : [ ],
+                              "DataSeriesStyle6_StateParameters" : [ ],
+                              "DataSeriesStyle7_StateParameters" : [ ],
+                              "DataSeriesStyle8_StateParameters" : [ ],
+                              "DataSeriesStyle9_StateParameters" : [ ],
+                              "DataSeriesStyle_StateParameters" : [ ],
+                              "DirectSelectionZoom" : "none",
+                              "Disabled" : false,
+                              "DisplayName" : "ptcs-chartline-50",
+                              "DragSelectionZoom" : "none",
+                              "Height" : 400,
+                              "HideLegend" : false,
+                              "HideLines" : false,
+                              "HideMarkers" : false,
+                              "HideNotes" : false,
+                              "HideValues" : false,
+                              "HideXAxis" : false,
+                              "HideYAxis" : false,
+                              "HorizontalAxisMaxHeight" : 85,
+                              "HorizontalEndZoomLabel" : "",
+                              "HorizontalIntervalAnchorPoint" : "start",
+                              "HorizontalIntervalAnchorPointLabel" : "",
+                              "HorizontalIntervalControl" : "none",
+                              "HorizontalIntervalControlLabel" : "",
+                              "HorizontalRangeZoom" : false,
+                              "HorizontalSliderZoom" : false,
+                              "HorizontalSliderZoomMaxLabel" : "",
+                              "HorizontalSliderZoomMinLabel" : "",
+                              "HorizontalStartZoomLabel" : "",
+                              "HorizontalZoom" : false,
+                              "Id" : "ptcschartline-50",
+                              "Label" : "Line Chart",
+                              "LabelAlignment" : "left",
+                              "LabelPosition" : "top",
+                              "LabelReset" : "Reset",
+                              "LabelType" : "sub-header",
+                              "LastContainer" : false,
+                              "Left" : 0,
+                              "LegendAlignment" : "start",
+                              "LegendFilter" : false,
+                              "LegendMarkerShapes" : "square",
+                              "LegendMaxWidth" : 736,
+                              "LegendPosition" : "right",
+                              "MarkerShape" : "circle",
+                              "MarkerSize" : 8,
+                              "MultipleDataSources" : false,
+                              "Notes" : "",
+                              "NotesAlignment" : "left",
+                              "NotesPosition" : "bottom",
+                              "NumberOfSeries" : 2,
+                              "PointerType" : "auto",
+                              "ResponsiveLayout" : false,
+                              "ReverseSecondYAxis" : false,
+                              "ReverseXAxis" : false,
+                              "ReverseYAxis" : false,
+                              "RulersInFront" : false,
+                              "SecondYAxis" : false,
+                              "SecondYAxisFormat" : "0000.0",
+                              "SecondYAxisLabel" : "Secondary Y-axis",
+                              "SecondYAxisLabelAlignment" : "center",
+                              "SecondYAxisType" : "label",
+                              "SeriesStacking" : "none",
+                              "ShowArea" : false,
+                              "ShowDataLoading" : true,
+                              "ShowHorizontalAnchorPointControl" : false,
+                              "ShowXAxisRuler" : false,
+                              "ShowYAxisRuler" : false,
+                              "ShowZeroValueRuler" : false,
+                              "SparkView" : false,
+                              "StackOrder" : "auto",
+                              "StepPosition" : "center",
+                              "StringEnd" : "[[endRange]]",
+                              "StringStart" : "[[startRange]]",
+                              "TabSequence" : 0,
+                              "Top" : 0,
+                              "Type" : "ptcschartline",
+                              "UseSampleDataInRuntime" : false,
+                              "UseSecondYAxis1" : false,
+                              "UseSecondYAxis10" : false,
+                              "UseSecondYAxis11" : false,
+                              "UseSecondYAxis12" : false,
+                              "UseSecondYAxis13" : false,
+                              "UseSecondYAxis14" : false,
+                              "UseSecondYAxis15" : false,
+                              "UseSecondYAxis16" : false,
+                              "UseSecondYAxis17" : false,
+                              "UseSecondYAxis18" : false,
+                              "UseSecondYAxis19" : false,
+                              "UseSecondYAxis2" : false,
+                              "UseSecondYAxis20" : false,
+                              "UseSecondYAxis21" : false,
+                              "UseSecondYAxis22" : false,
+                              "UseSecondYAxis23" : false,
+                              "UseSecondYAxis24" : false,
+                              "UseSecondYAxis3" : false,
+                              "UseSecondYAxis4" : false,
+                              "UseSecondYAxis5" : false,
+                              "UseSecondYAxis6" : false,
+                              "UseSecondYAxis7" : false,
+                              "UseSecondYAxis8" : false,
+                              "UseSecondYAxis9" : false,
+                              "UseTheme" : true,
+                              "ValuesPosition" : "above",
+                              "VerticalAxisMaxWidth" : 85,
+                              "VerticalSliderZoom" : false,
+                              "VerticalSliderZoomMaxLabel" : "",
+                              "VerticalSliderZoomMinLabel" : "",
+                              "VerticalZoom" : false,
+                              "Visible" : true,
+                              "Width" : 614,
+                              "XAxisDateFormatToken" : "",
+                              "XAxisField" : "timestamp",
+                              "XAxisFormat" : "0000.0",
+                              "XAxisLabel" : "X-axis",
+                              "XAxisLabelAlignment" : "start",
+                              "XAxisMaximumValues" : "",
+                              "XAxisMinimumValues" : "",
+                              "XAxisType" : "date",
+                              "YAxisDateFormatToken" : "",
+                              "YAxisFormat" : "0000.0",
+                              "YAxisLabel" : "Y-axis",
+                              "YAxisLabelAlignment" : "center",
+                              "YAxisRulerAlignment" : "primary",
+                              "YAxisType" : "number",
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Line Chart"
+                            },
+                            "Widgets" : [ ]
+                          } ]
+                        }, {
+                          "Properties" : {
+                            "AlternateText" : "",
+                            "Area" : "UI",
+                            "DisplayName" : "ptcs-image-51",
+                            "Height" : 20,
+                            "Id" : "ptcsimage-51",
+                            "LastContainer" : false,
+                            "Left" : 1145,
+                            "Position" : "top",
+                            "PreventCaching" : false,
+                            "ResponsiveLayout" : false,
+                            "Scaling" : "fit-x",
+                            "ShowDataLoading" : true,
+                            "SourceURL" : "/Thingworx/MediaEntities/ColdChainLogIcon",
+                            "Top" : 5,
+                            "Type" : "ptcsimage",
+                            "UseTheme" : true,
+                            "Visible" : true,
+                            "Width" : 20,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Image"
+                          },
+                          "Widgets" : [ ]
+                        } ]
+                      }, {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "ButtonType" : "primary",
+                          "ContextID" : "",
+                          "Disabled" : false,
+                          "DisplayName" : "ptcs-button-9",
+                          "Icon" : "/Thingworx/MediaEntities/ColdChainHomeIcon",
+                          "Id" : "ptcsbutton-9",
+                          "Label" : "Home",
+                          "LabelAlignment" : "center",
+                          "LastContainer" : false,
+                          "Left" : 54,
+                          "ResponsiveLayout" : false,
+                          "ShowDataLoading" : true,
+                          "TabSequence" : 0,
+                          "Top" : 90,
+                          "Type" : "ptcsbutton",
+                          "UseTheme" : true,
+                          "Visible" : true,
+                          "Width" : 112,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Button"
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "ButtonType" : "primary",
+                          "ContextID" : "",
+                          "Disabled" : false,
+                          "DisplayName" : "ptcs-button-10",
+                          "Icon" : "/Thingworx/MediaEntities/ColdChainAdminIcon",
+                          "Id" : "ptcsbutton-10",
+                          "Label" : "Admin",
+                          "LabelAlignment" : "center",
+                          "LastContainer" : false,
+                          "Left" : 54,
+                          "ResponsiveLayout" : false,
+                          "ShowDataLoading" : true,
+                          "TabSequence" : 0,
+                          "Top" : 139,
+                          "Type" : "ptcsbutton",
+                          "UseTheme" : true,
+                          "Visible" : true,
+                          "Width" : 112,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Button"
+                        },
+                        "Widgets" : [ ]
+                      } ]
+                    }, {
+                      "Properties" : {
+                        "Alignment" : "left",
+                        "Area" : "UI",
+                        "ClickOutsideToClose" : false,
+                        "DisplayName" : "navigation-53",
+                        "FixedPopupHeight" : 0,
+                        "FixedPopupWidth" : 0,
+                        "Height" : 30,
+                        "Icon" : "",
+                        "IconAlignment" : "left",
+                        "Id" : "navigation-53",
+                        "LastContainer" : false,
+                        "Left" : 960,
+                        "MashupName" : "ColdChainDeviceMashup",
+                        "MashupParameters" : [ {
+                          "BaseType" : "INFOTABLE",
+                          "Description" : "",
+                          "ParameterName" : "chart",
+                          "ParmDef" : {
+                            "aspects" : {
+                              "bindingDirection" : "IN",
+                              "dataShape" : "ColdChain_DS1",
+                              "isDataTableEntry" : true,
+                              "isMandatory" : "true"
+                            },
+                            "baseType" : "INFOTABLE",
+                            "description" : "",
+                            "name" : "chart",
+                            "ordinal" : 0
+                          }
+                        }, {
+                          "BaseType" : "INFOTABLE",
+                          "Description" : "",
+                          "ParameterName" : "map",
+                          "ParmDef" : {
+                            "aspects" : {
+                              "bindingDirection" : "IN",
+                              "dataShape" : "ColdChain_DS",
+                              "isMandatory" : "true"
+                            },
+                            "baseType" : "INFOTABLE",
+                            "description" : "",
+                            "name" : "map",
+                            "ordinal" : 0
+                          }
+                        } ],
+                        "MessageToShow" : "Mashup must be selected",
+                        "ModalPopupOpacity" : 0.5,
+                        "NavigationActiveStyle" : "DefaultNavigationActiveStyle",
+                        "NavigationFocusStyle" : "DefaultNavigationFocusStyle",
+                        "NavigationHoverStyle" : "DefaultNavigationHoverStyle",
+                        "PopupScrolling" : "auto",
+                        "PopupTitle" : "",
+                        "PopupTitleStyle" : "DefaultPopupTitleStyle",
+                        "ReloadOnReplace" : false,
+                        "ResponsiveLayout" : false,
+                        "RoundedCorners" : true,
+                        "ShowCloseButton" : true,
+                        "ShowDataLoading" : true,
+                        "ShowMessageIfNoMashup" : false,
+                        "SingleClickSelectOnTablets" : true,
+                        "Style" : "DefaultNavigationStyle",
+                        "TabSequence" : 0,
+                        "TargetWindow" : "replace",
+                        "Text" : "Mashup Link",
+                        "ToolTipField" : "",
+                        "ToolTipStyle" : "DefaultTooltipStyle",
+                        "Top" : 1,
+                        "Transparent" : false,
+                        "Type" : "navigation",
+                        "Visible" : false,
+                        "Width" : 200,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Navigation",
+                        "__supportsTooltip" : true
+                      },
+                      "Widgets" : [ ]
+                    } ]
+                  } ]
+                } ]
+              },
+              "mashupType" : "mashup"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

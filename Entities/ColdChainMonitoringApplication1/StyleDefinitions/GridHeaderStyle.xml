@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="password">
+    <StyleDefinitions>
+        <StyleDefinition
+         aspect.isThemeObject="true"
+         description="Default Style for Grid Widget Header - Theme: ThingWorx"
+         documentationContent=""
+         homeMashup=""
+         name="GridHeaderStyle"
+         projectName="ColdChainMonitoringApplication1"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "backgroundColor" : "rgba(238,120,108,1)",
+              "displayString" : "",
+              "fontEmphasisBold" : true,
+              "fontEmphasisItalic" : true,
+              "fontEmphasisUnderline" : false,
+              "foregroundColor" : "rgba(0,0,0,1)",
+              "image" : "",
+              "lineColor" : "#dddddd",
+              "lineStyle" : "solid",
+              "lineThickness" : 1,
+              "secondaryBackgroundColor" : "",
+              "textSize" : "normal"
+            }
+            ]]>
+            </content>
+        </StyleDefinition>
+    </StyleDefinitions>
+</Entities>

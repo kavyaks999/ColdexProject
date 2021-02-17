@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="password">
+    <StateDefinitions>
+        <StateDefinition
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="ColdChainSD_2"
+         projectName="ColdChainMonitoringApplication1"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "ColdChainRed_1",
+                "defaultValue" : "20",
+                "description" : "",
+                "displayString" : "Low",
+                "name" : ""
+              }, {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "ColdChainGreen_1",
+                "defaultValue" : "40",
+                "description" : "",
+                "displayString" : "Normal",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "ColdChainRed_1",
+                "defaultValue" : "",
+                "description" : "",
+                "displayString" : "high",
+                "name" : ""
+              } ],
+              "stateType" : "numeric"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

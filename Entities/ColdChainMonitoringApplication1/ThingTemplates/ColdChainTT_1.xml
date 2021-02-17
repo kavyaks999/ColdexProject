@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="password">
+    <ThingTemplates>
+        <ThingTemplate
+         baseThingTemplate="GenericThing"
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         homeMashup=""
+         inheritedValueStream=""
+         name="ColdChainTT_1"
+         projectName="ColdChainMonitoringApplication1"
+         tags=""
+         thingPackage=""
+         valueStream="ColdChainVS_1">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainAdmin_1"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainSevice_1"
+                         type="Group"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainAdmin_1"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainSevice_1"
+                         type="Group"></Principal>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainAdmin_1"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainSevice_1"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainAdmin_1"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainSevice_1"
+                         type="Group"></Principal>
+                    </EventInvoke>
+                    <EventSubscribe>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainAdmin_1"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ColdChainSevice_1"
+                         type="Group"></Principal>
+                    </EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="ColdChainOrganization"
+                     type="Organization"></Principal>
+                    <Principal
+                     isPermitted="true"
+                     name="ColdChainOrganization:Administrator"
+                     type="OrganizationalUnit"></Principal>
+                    <Principal
+                     isPermitted="true"
+                     name="ColdChainOrganization:Service_Engineer"
+                     type="OrganizationalUnit"></Principal>
+                    <Principal
+                     isPermitted="true"
+                     name="ColdChainTest.Org"
+                     type="Organization"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="CheckPoint1"></AlertDefinitions>
+                <AlertDefinitions
+                 name="CheckPoint2"></AlertDefinitions>
+                <AlertDefinitions
+                 name="CheckPoint3"></AlertDefinitions>
+                <AlertDefinitions
+                 name="CheckPoint4"></AlertDefinitions>
+                <AlertDefinitions
+                 name="Destination"></AlertDefinitions>
+                <AlertDefinitions
+                 name="DestinationName"></AlertDefinitions>
+                <AlertDefinitions
+                 name="Humidity">
+                    <AlertDefinition
+                     alertType="OutOfRange"
+                     description=""
+                     enabled="true"
+                     name="HumidityAlert"
+                     priority="1"
+                     propertyBaseType="NUMBER">
+                        <AlertAttributes>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.defaultValue="false"
+                                     aspect.friendlyName="Calculate minimum and maximum"
+                                     aspect.isRequired="false"
+                                     aspect.show="model.entityType === 'Thing' &amp;&amp; model.alertType === 'OutOfRange' &amp;&amp; (model.itemType === undefined || model.itemType === 'my' || (model.itemType ==='inherited' &amp;&amp; model.override === true))"
+                                     baseType="BOOLEAN"
+                                     description="Calculate Limit from alert value"
+                                     name="calculationShow"
+                                     ordinal="4"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.class="attribute-indent"
+                                     aspect.defaultValue="Percentage"
+                                     aspect.friendlyName="Calculation Units"
+                                     aspect.isRequired="false"
+                                     aspect.selectOptions="Amount:Amount|Percentage:Percentage"
+                                     aspect.show="model.alertModel.alert.alertAttributes.rows[0].calculationShow"
+                                     baseType="STRING"
+                                     description="Calculation type"
+                                     name="calculationType"
+                                     ordinal="6"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.class="attribute-indent"
+                                     aspect.friendlyName="Calculation Value"
+                                     aspect.isRequired="false"
+                                     aspect.show="model.alertModel.alert.alertAttributes.rows[0].calculationShow"
+                                     baseType="NUMBER"
+                                     description="Calculation value for Min and Max from alert value"
+                                     name="calculationValue"
+                                     ordinal="5"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.disabledWhenField="calculationShow"
+                                     aspect.friendlyName="Maximum"
+                                     aspect.isRequired="true"
+                                     baseType="NUMBER"
+                                     description="Maximum value"
+                                     name="maximum"
+                                     ordinal="2"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.defaultValue="false"
+                                     aspect.friendlyName="Include Maximum?"
+                                     aspect.isRequired="false"
+                                     baseType="BOOLEAN"
+                                     description="Range includes maximum"
+                                     name="maximumInclusive"
+                                     ordinal="3"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.compareField="maximum"
+                                     aspect.compareType="le"
+                                     aspect.disabledWhenField="calculationShow"
+                                     aspect.friendlyName="Minimum"
+                                     aspect.isRequired="true"
+                                     baseType="NUMBER"
+                                     description="Minimum value"
+                                     name="minimum"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.defaultValue="true"
+                                     aspect.friendlyName="Include Minimum?"
+                                     aspect.isRequired="false"
+                                     baseType="BOOLEAN"
+                                     description="Range includes minimum"
+                                     name="minimumInclusive"
+                                     ordinal="1"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.class="attribute-indent"
+                                     aspect.friendlyName="Property Value"
+                                     aspect.isRequired="false"
+                                     aspect.show="model.alertModel.alert.alertAttributes.rows[0].calculationShow"
+                                     aspect.twxid="allowPropertyValueRetrieval"
+                                     baseType="NUMBER"
+                                     description="property value"
+                                     name="propertyValue"
+                                     ordinal="7"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <calculationShow>false</calculationShow>
+                                    <calculationType>
+                                    <![CDATA[
+                                    Percentage
+                                    ]]>
+                                    </calculationType>
+                                    <maximum>57.0</maximum>
+                                    <maximumInclusive>false</maximumInclusive>
+                                    <minimum>22.0</minimum>
+                                    <minimumInclusive>true</minimumInclusive>
+                                </Row>
+                            </Rows>
+                        </AlertAttributes>
+                    </AlertDefinition>
+                </AlertDefinitions>
+                <AlertDefinitions
+                 name="HumidityWarning"></AlertDefinitions>
+                <AlertDefinitions
+                 name="IsThreatHumidity"></AlertDefinitions>
+                <AlertDefinitions
+                 name="IsThreatTemperature"></AlertDefinitions>
+                <AlertDefinitions
+                 name="Model"></AlertDefinitions>
+                <AlertDefinitions
+                 name="Origin"></AlertDefinitions>
+                <AlertDefinitions
+                 name="OriginName"></AlertDefinitions>
+                <AlertDefinitions
+                 name="RegNo"></AlertDefinitions>
+                <AlertDefinitions
+                 name="SerialNumber"></AlertDefinitions>
+                <AlertDefinitions
+                 name="Temperature">
+                    <AlertDefinition
+                     alertType="OutOfRange"
+                     description=""
+                     enabled="true"
+                     name="TemperatureAlert"
+                     priority="1"
+                     propertyBaseType="NUMBER">
+                        <AlertAttributes>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.defaultValue="false"
+                                     aspect.friendlyName="Calculate minimum and maximum"
+                                     aspect.isRequired="false"
+                                     aspect.show="model.entityType === 'Thing' &amp;&amp; model.alertType === 'OutOfRange' &amp;&amp; (model.itemType === undefined || model.itemType === 'my' || (model.itemType ==='inherited' &amp;&amp; model.override === true))"
+                                     baseType="BOOLEAN"
+                                     description="Calculate Limit from alert value"
+                                     name="calculationShow"
+                                     ordinal="4"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.class="attribute-indent"
+                                     aspect.defaultValue="Percentage"
+                                     aspect.friendlyName="Calculation Units"
+                                     aspect.isRequired="false"
+                                     aspect.selectOptions="Amount:Amount|Percentage:Percentage"
+                                     aspect.show="model.alertModel.alert.alertAttributes.rows[0].calculationShow"
+                                     baseType="STRING"
+                                     description="Calculation type"
+                                     name="calculationType"
+                                     ordinal="6"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.class="attribute-indent"
+                                     aspect.friendlyName="Calculation Value"
+                                     aspect.isRequired="false"
+                                     aspect.show="model.alertModel.alert.alertAttributes.rows[0].calculationShow"
+                                     baseType="NUMBER"
+                                     description="Calculation value for Min and Max from alert value"
+                                     name="calculationValue"
+                                     ordinal="5"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.disabledWhenField="calculationShow"
+                                     aspect.friendlyName="Maximum"
+                                     aspect.isRequired="true"
+                                     baseType="NUMBER"
+                                     description="Maximum value"
+                                     name="maximum"
+                                     ordinal="2"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.defaultValue="false"
+                                     aspect.friendlyName="Include Maximum?"
+                                     aspect.isRequired="false"
+                                     baseType="BOOLEAN"
+                                     description="Range includes maximum"
+                                     name="maximumInclusive"
+                                     ordinal="3"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.compareField="maximum"
+                                     aspect.compareType="le"
+                                     aspect.disabledWhenField="calculationShow"
+                                     aspect.friendlyName="Minimum"
+                                     aspect.isRequired="true"
+                                     baseType="NUMBER"
+                                     description="Minimum value"
+                                     name="minimum"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.defaultValue="true"
+                                     aspect.friendlyName="Include Minimum?"
+                                     aspect.isRequired="false"
+                                     baseType="BOOLEAN"
+                                     description="Range includes minimum"
+                                     name="minimumInclusive"
+                                     ordinal="1"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.class="attribute-indent"
+                                     aspect.friendlyName="Property Value"
+                                     aspect.isRequired="false"
+                                     aspect.show="model.alertModel.alert.alertAttributes.rows[0].calculationShow"
+                                     aspect.twxid="allowPropertyValueRetrieval"
+                                     baseType="NUMBER"
+                                     description="property value"
+                                     name="propertyValue"
+                                     ordinal="7"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <calculationShow>false</calculationShow>
+                                    <calculationType>
+                                    <![CDATA[
+                                    Percentage
+                                    ]]>
+                                    </calculationType>
+                                    <maximum>10.0</maximum>
+                                    <maximumInclusive>false</maximumInclusive>
+                                    <minimum>-20.0</minimum>
+                                    <minimumInclusive>false</minimumInclusive>
+                                </Row>
+                            </Rows>
+                        </AlertAttributes>
+                    </AlertDefinition>
+                </AlertDefinitions>
+                <AlertDefinitions
+                 name="TemperatureWarning"></AlertDefinitions>
+                <AlertDefinitions
+                 name="TruckId"></AlertDefinitions>
+                <AlertDefinitions
+                 name="TruckLocation"></AlertDefinitions>
+                <AlertDefinitions
+                 name="TruckLocationName"></AlertDefinitions>
+            </AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="LOCATION"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="CheckPoint1"
+                     ordinal="6"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="LOCATION"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="CheckPoint2"
+                     ordinal="7"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="LOCATION"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="CheckPoint3"
+                     ordinal="8"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="LOCATION"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="CheckPoint4"
+                     ordinal="9"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="LOCATION"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="Destination"
+                     ordinal="5"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="DestinationName"
+                     ordinal="11"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="HumidityWarning"
+                     ordinal="19"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isLogged="true"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="IsThreatHumidity"
+                     ordinal="14"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isLogged="false"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="IsThreatTemperature"
+                     ordinal="13"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="Model"
+                     ordinal="13"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="LOCATION"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="Origin"
+                     ordinal="4"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="OriginName"
+                     ordinal="10"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="RegNo"
+                     ordinal="17"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="SerialNumber"
+                     ordinal="12"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="TemperatureWarning"
+                     ordinal="18"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="TruckId"
+                     ordinal="3"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="LOCATION"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="TruckLocation"
+                     ordinal="16"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isLogged="true"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="TruckLocationName"
+                     ordinal="15"></PropertyDefinition>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="true"
+                     category=""
+                     description=""
+                     isAllowOverride="true"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="HighTemperature">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="HighTemperature">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        if(Things["Truck6-1"].Temperature > 10) {
+                                            result = true;
+                                        
+                                        } else  {
+                                            result=false;
+                                        
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions>
+                    <Subscription
+                     description=""
+                     enabled="true"
+                     eventName="DataChange"
+                     name="HumiditySubscription"
+                     source=""
+                     sourceProperty="Humidity"
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="HumiditySubscription">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 dataShapeName=""
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            try {
+                                                let flag=false;
+                                                if(me.Humidity >57) {
+                                                   me.HumidityWarning ="High Humidity: "+me.Humidity; 
+                                                    flag=true;
+                                                    
+                                            } 
+                                            	else if(me.Humidity <22) {
+                                                 me.HumidityWarning ="Low Humidity: "+me.Humidity;
+                                                    flag=true;
+                                            }
+                                                else{
+                                                   me.HumidityWarning=" ";
+                                                }
+                                                if(flag){
+                                                    
+                                            let StreamEntryValues =  Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable" /* STRING */,
+                                            	dataShapeName: "AlertDS_1" /* DATASHAPENAME */
+                                            });
+                                                    let StreamEntry ={
+                                                        AlertMessage: me.HumidityWarning,
+                                                AlertTime:eventTime,// DATETIME
+                                                IsAcknowledged: false,// BOOLEAN
+                                                TruckId : me.TruckId, // NUMBER
+                                                Truck_Name:me.Model,        
+                                                    };
+                                                    
+                                                   StreamEntryValues .AddRow(StreamEntry);
+                                                    
+                                            Things["ColdChainStream_1"].AddStreamEntry({
+                                            	sourceType: undefined /* STRING */,
+                                            	values: StreamEntryValues /* INFOTABLE */,
+                                            	location: undefined /* LOCATION */,
+                                            	source: me.name/* STRING */,
+                                            	timestamp: undefined /* DATETIME */,
+                                            	tags: undefined /* TAGS */
+                                            });
+                                                }
+                                            }
+                                                    
+                                                    catch(err) {
+                                                         logger.error("Error occurred in " + me.name+ " in [HumiditySubscription] : on line " + err.lineNumber + ": " + err.message);
+                                            }
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription
+                     description=""
+                     enabled="true"
+                     eventName="DataChange"
+                     name="TemperatureSubscription"
+                     source=""
+                     sourceProperty="Temperature"
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="TemperatureSubscription">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 dataShapeName=""
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            try {
+                                                let flag=false;
+                                                if(me.Temperature>10) {
+                                                   me.TemperatureWarning="High Temperature: "+me.Temperature;
+                                                    flag=true;
+                                                    
+                                            } 
+                                            	else if(me.Temperature<-10) {
+                                                 	me.TemperatureWarning="Low Temperature: "+me.Temperature;
+                                                    flag=true;
+                                            }
+                                                else{
+                                                    me.TemperatureWarning=" ";
+                                                }
+                                            
+                                            	if(flag){
+                                                    
+                                            let StreamEntryValues =  Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable" /* STRING */,
+                                            	dataShapeName: "AlertDS_1" /* DATASHAPENAME */
+                                            });
+                                                  let StreamEntry ={
+                                                        AlertMessage: me.TemperatureWarning,
+                                                AlertTime:eventTime,// DATETIME
+                                                IsAcknowledged: false,// BOOLEAN
+                                                TruckId : me.TruckId, // NUMBER
+                                                Truck_Name:me.Model,        
+                                                    };
+                                                    
+                                                   StreamEntryValues .AddRow(StreamEntry);
+                                                    
+                                            Things["ColdChainStream_1"].AddStreamEntry({
+                                            	sourceType: undefined /* STRING */,
+                                            	values: StreamEntryValues /* INFOTABLE */,
+                                            	location: undefined /* LOCATION */,
+                                            	source: me.name/* STRING */,
+                                            	timestamp: undefined /* DATETIME */,
+                                            	tags: undefined /* TAGS */
+                                            });
+                                                }
+                                            }
+                                                    
+                                                    catch(err) {
+                                                         logger.error("Error occurred in " + me.name+ " in [TemperatureSubscription] : on line " + err.lineNumber + ": " + err.message);
+                                            }
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription
+                     description=""
+                     enabled="true"
+                     eventName="Alert"
+                     name="TemperatureWarningSubcsription"
+                     source=""
+                     sourceProperty="Temperature"
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="TemperatureWarningSubcsription">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 dataShapeName=""
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            me.message="Warning : Temperature is out of limits !! .";
+                                            logger.warn("Subscription(Temperature) was triggered");
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                </Subscriptions>
+            </ThingShape>
+            <ImplementedShapes>
+                <ImplementedShape
+                 name="ColdChainTS_1"
+                 type="ThingShape"></ImplementedShape>
+            </ImplementedShapes>
+            <SharedConfigurationTables></SharedConfigurationTables>
+            <InstanceDesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+            <InstanceVisibilityPermissions>
+                <Visibility></Visibility>
+            </InstanceVisibilityPermissions>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>

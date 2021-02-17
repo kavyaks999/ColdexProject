@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="password">
+    <StateDefinitions>
+        <StateDefinition
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="ColdChain_Temp"
+         projectName="ColdChainMonitoringApplication1"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "ColdChainRed",
+                "defaultValue" : "-50",
+                "description" : "",
+                "displayString" : "Danger",
+                "name" : ""
+              }, {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "Yellow",
+                "defaultValue" : "-30",
+                "description" : "",
+                "displayString" : "Unfavorable",
+                "name" : ""
+              }, {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "ColdChainGreen",
+                "defaultValue" : "30",
+                "description" : "",
+                "displayString" : "Safe",
+                "name" : ""
+              }, {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "Yellow",
+                "defaultValue" : "50",
+                "description" : "",
+                "displayString" : "Unfavorable",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "ColdChainRed",
+                "defaultValue" : "",
+                "description" : "",
+                "displayString" : "Danger",
+                "name" : ""
+              } ],
+              "stateType" : "numeric"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

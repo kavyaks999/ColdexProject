@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <ExtensionPackages>
+<<<<<<< HEAD
         <ExtensionPackage dependsOn="" description="" minimumThingWorxVersion="8.3.0" name="New-Project" packageVersion="1.0.0" vendor=""> 
+=======
+        <ExtensionPackage dependsOn="" description="" minimumThingWorxVersion="8.3.0" name="ColdexProject" packageVersion="1.0.0" vendor=""> 
+>>>>>>> branch 'main' of https://github.com/kavyaks999/ColdexProject
         </ExtensionPackage>
     </ExtensionPackages>
 </Entities>

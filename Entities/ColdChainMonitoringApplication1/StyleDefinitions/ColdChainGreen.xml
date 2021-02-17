@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="password">
+    <StyleDefinitions>
+        <StyleDefinition
+         aspect.isThemeObject="true"
+         description="Blue - Default chart series 1 style"
+         documentationContent=""
+         homeMashup=""
+         name="ColdChainGreen"
+         projectName="ColdChainMonitoringApplication1"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "backgroundColor" : "rgba(37,203,163,1)",
+              "displayString" : "Series 1",
+              "fontEmphasisBold" : false,
+              "fontEmphasisItalic" : false,
+              "fontEmphasisUnderline" : false,
+              "foregroundColor" : "#6db5ff",
+              "image" : "",
+              "lineColor" : "rgba(37,203,163,1)",
+              "lineStyle" : "solid",
+              "lineThickness" : "2",
+              "secondaryBackgroundColor" : "rgba(37,203,163,1)",
+              "textSize" : "normal"
+            }
+            ]]>
+            </content>
+        </StyleDefinition>
+    </StyleDefinitions>
+</Entities>

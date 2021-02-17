@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="password">
+    <StateDefinitions>
+        <StateDefinition
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="ColdChainHumidityState"
+         projectName="ColdChainMonitoringApplication1"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "Red",
+                "defaultValue" : "65",
+                "description" : "",
+                "displayString" : "Red",
+                "name" : ""
+              }, {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "Yellow",
+                "defaultValue" : "85",
+                "description" : "",
+                "displayString" : "Yellow",
+                "name" : ""
+              }, {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "Green",
+                "defaultValue" : "95",
+                "description" : "",
+                "displayString" : "Green",
+                "name" : ""
+              }, {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "Red",
+                "defaultValue" : "120",
+                "description" : "",
+                "displayString" : "Yellow",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "Red",
+                "defaultValue" : "",
+                "description" : "",
+                "displayString" : "Red",
+                "name" : ""
+              } ],
+              "stateType" : "numeric"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="StatusMessageTest.Mashup"
+         projectName="ColdChainMonitoringApplication1"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Mashup Mobile Settings"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="MobileSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Disable Zoom"
+                             baseType="BOOLEAN"
+                             description="Disables zooming in and out within the mashup"
+                             name="disableZoom"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Full Screen Mode"
+                             baseType="BOOLEAN"
+                             description="Open the mashup in full screen mode"
+                             name="fullScreenMode"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Height"
+                             baseType="STRING"
+                             description="The height of the mashup page"
+                             name="height"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-height"
+                             aspect.friendlyName="Height Type"
+                             baseType="STRING"
+                             description="Use the height of the device display, or a custom height (in px)"
+                             name="heightType"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Initial Scale"
+                             baseType="NUMBER"
+                             description="The initial zoom scale when the mashup is loaded for the first time"
+                             name="initialScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Shortcut Icon Title"
+                             baseType="STRING"
+                             description="A title for the mashup shortcut on the iOS home screen"
+                             name="iosShortcutIconTitle"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="black-translucent"
+                             aspect.friendlyName="Status Bar Appearance"
+                             baseType="STRING"
+                             description="The style of the iOS status bar"
+                             name="iosStatusBarAppearance"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Maximum Scale"
+                             baseType="NUMBER"
+                             description="The maximum scale that users can zoom out to"
+                             name="maximumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0.1"
+                             aspect.friendlyName="Minimum Scale"
+                             baseType="NUMBER"
+                             description="The minimum scale that users can zoom out to"
+                             name="minimumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Width"
+                             baseType="STRING"
+                             description="The width of the mashup page"
+                             name="width"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-width"
+                             aspect.friendlyName="Width Type"
+                             baseType="STRING"
+                             description="Use the width of the device display, or a custom width (in px)"
+                             name="widthType"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <disableZoom>false</disableZoom>
+                            <fullScreenMode>true</fullScreenMode>
+                            <height>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </height>
+                            <heightType>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </heightType>
+                            <initialScale>1.0</initialScale>
+                            <iosShortcutIconTitle></iosShortcutIconTitle>
+                            <iosStatusBarAppearance>
+                            <![CDATA[
+                            black-translucent
+                            ]]>
+                            </iosStatusBarAppearance>
+                            <maximumScale>10.0</maximumScale>
+                            <minimumScale>0.1</minimumScale>
+                            <width>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </width>
+                            <widthType>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </widthType>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "CustomMashupCss" : "",
+              "Data" : {
+                "DynamicThingTemplates_ColdChainTT_1" : {
+                  "DataName" : "DynamicThingTemplates_ColdChainTT_1",
+                  "EntityName" : "ColdChainTT_1",
+                  "EntityType" : "DynamicThingTemplates",
+                  "Id" : "2e82a563-7453-48ee-80c0-270d81ae5900",
+                  "RefreshInterval" : 0,
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "5067a99c-e11a-4b60-b65e-a397bf52252b",
+                    "Name" : "HighTemperature",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "HighTemperature"
+                  } ]
+                },
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "ThingTemplates_ColdChainTT_1" : {
+                  "DataName" : "ThingTemplates_ColdChainTT_1",
+                  "EntityName" : "ColdChainTT_1",
+                  "EntityType" : "ThingTemplates",
+                  "Id" : "c9070c9e-06d7-4f2c-9bce-87522a77904f",
+                  "RefreshInterval" : 0,
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "dcbd6a82-5eb7-4ec3-bcd6-5ce5698a421b",
+                    "Name" : "GetImplementingThingsWithData",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetImplementingThingsWithData"
+                  } ]
+                },
+                "Things_Test.Thing" : {
+                  "DataName" : "Things_Test.Thing",
+                  "EntityName" : "Test.Thing",
+                  "EntityType" : "Things",
+                  "Id" : "65883ea4-9241-4735-81f3-b6cb0579ba15",
+                  "RefreshInterval" : 0,
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "d65ffae0-64b9-46c6-893b-c6209ad53196",
+                    "Name" : "Test",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "Test"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "28245e3d-197d-4f0d-a7e6-e6252d1c5aab",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "name",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "value",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "Entity"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetImplementingThingsWithData",
+                "SourceSection" : "ThingTemplates_ColdChainTT_1",
+                "TargetArea" : "Data",
+                "TargetId" : "EntityName",
+                "TargetSection" : "DynamicThingTemplates_ColdChainTT_1"
+              }, {
+                "Id" : "c4b80ca3-ebe8-4bcc-be07-9756cf81958b",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Output",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Message",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "validator-13",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "statusmessage-14",
+                "TargetSection" : ""
+              }, {
+                "Id" : "cf2d505c-59dc-4e06-b264-3ee00e9279b3",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "result",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Temperature",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "Test",
+                "SourceSection" : "Things_Test.Thing",
+                "TargetArea" : "UI",
+                "TargetId" : "validator-13",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "statusmessage-14",
+                "EventHandlerService" : "ShowMessage",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "True",
+                "EventTriggerId" : "validator-13",
+                "EventTriggerSection" : "",
+                "Id" : "0d251d72-2fde-4378-bdb2-22ac5e38376a"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_Test.Thing",
+                "EventHandlerService" : "Test",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "9b05f335-5271-4284-ba4e-50e523e48689"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "validator-13",
+                "EventHandlerService" : "Evaluate",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "Test",
+                "EventTriggerSection" : "Things_Test.Thing",
+                "Id" : "bc28ff9a-df83-4a2a-b13f-f0e03bf4014c"
+              } ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButton" : "SimplePlus",
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImage" : "",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButton" : "SimpleGear",
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "MashupResolution" : "1366x768",
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : true,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMashupStyle",
+                  "StyleProperties" : {
+                    "data" : {
+                      "flexcontainer-3" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "rgba(7,19,48,1)"
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-4" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "rgba(7,19,48,1)"
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-7" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "rgba(7,19,48,1)"
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-8" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "rgba(88,133,165,1)"
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      }
+                    },
+                    "meta" : {
+                      "type" : "WidgetStyler",
+                      "version" : "1.0"
+                    }
+                  },
+                  "StyleTheme" : "PTC Convergence Theme",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "UseMasterTheme" : false,
+                  "UseTheme" : false,
+                  "Visible" : true,
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "MashupTemplate",
+                  "flex-grow" : 0,
+                  "id_index" : 18,
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "container-2",
+                    "EnableExpandCollapse" : false,
+                    "ExpandCollapseTabLocation" : "inside",
+                    "Expanded" : true,
+                    "Id" : "flexcontainer-2",
+                    "LastContainer" : true,
+                    "Overlay" : false,
+                    "ResponsiveLayout" : true,
+                    "ShowDataLoading" : true,
+                    "ShowExpandCollapseTab" : false,
+                    "SourceURL" : "",
+                    "Style" : "DefaultContainerStyle",
+                    "StyleProperties" : { },
+                    "Type" : "flexcontainer",
+                    "UseTheme" : true,
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Flex Container",
+                    "align-content" : "flex-start",
+                    "align-items" : "flex-start",
+                    "flex-basis" : "auto",
+                    "flex-direction" : "column",
+                    "flex-grow" : 1,
+                    "flex-height" : 0,
+                    "flex-max-height" : "",
+                    "flex-max-width" : "",
+                    "flex-min-height" : "",
+                    "flex-min-width" : "",
+                    "flex-shrink" : 0,
+                    "flex-size" : "default",
+                    "flex-width" : 0,
+                    "flex-wrap" : "nowrap",
+                    "iconClass" : "widgets-flexcontainer",
+                    "justify-content" : "flex-start",
+                    "positioning" : "responsive",
+                    "userCannotRemove" : true
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "Header",
+                      "EnableExpandCollapse" : false,
+                      "ExpandCollapseTabLocation" : "inside",
+                      "Expanded" : true,
+                      "Id" : "flexcontainer-4",
+                      "LastContainer" : false,
+                      "Overlay" : false,
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "SourceURL" : "",
+                      "Style" : "DefaultContainerStyle",
+                      "StyleProperties" : { },
+                      "Type" : "flexcontainer",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Flex Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "flex-start",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : 1,
+                      "flex-height" : 0,
+                      "flex-max-height" : "51px",
+                      "flex-max-width" : "",
+                      "flex-min-height" : "51px",
+                      "flex-min-width" : "",
+                      "flex-shrink" : 0,
+                      "flex-size" : "fixed",
+                      "flex-width" : 0,
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer-fixed",
+                      "isLocked" : false,
+                      "justify-content" : "flex-start",
+                      "positioning" : "responsive",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "container-5",
+                      "EnableExpandCollapse" : false,
+                      "ExpandCollapseTabLocation" : "inside",
+                      "Expanded" : true,
+                      "Id" : "flexcontainer-5",
+                      "LastContainer" : true,
+                      "Overlay" : false,
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "SourceURL" : "",
+                      "Style" : "DefaultContainerStyle",
+                      "StyleProperties" : { },
+                      "Type" : "flexcontainer",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Flex Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "flex-start",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : 1,
+                      "flex-height" : 0,
+                      "flex-max-height" : "",
+                      "flex-max-width" : "",
+                      "flex-min-height" : "",
+                      "flex-min-width" : "",
+                      "flex-shrink" : 0,
+                      "flex-size" : "default",
+                      "flex-width" : 0,
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer",
+                      "isLocked" : true,
+                      "justify-content" : "flex-start",
+                      "positioning" : "responsive",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "DisplayName" : "Left Sidebar",
+                        "EnableExpandCollapse" : false,
+                        "ExpandCollapseTabLocation" : "inside",
+                        "Expanded" : true,
+                        "Id" : "flexcontainer-7",
+                        "LastContainer" : false,
+                        "Overlay" : false,
+                        "ResponsiveLayout" : true,
+                        "ShowDataLoading" : true,
+                        "ShowExpandCollapseTab" : false,
+                        "SourceURL" : "",
+                        "Style" : "DefaultContainerStyle",
+                        "StyleProperties" : { },
+                        "Type" : "flexcontainer",
+                        "UseTheme" : true,
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Flex Container",
+                        "align-content" : "flex-start",
+                        "align-items" : "flex-start",
+                        "flex-basis" : "auto",
+                        "flex-direction" : "row",
+                        "flex-grow" : 1,
+                        "flex-height" : 0,
+                        "flex-max-height" : "",
+                        "flex-max-width" : "175px",
+                        "flex-min-height" : "",
+                        "flex-min-width" : "175px",
+                        "flex-shrink" : 0,
+                        "flex-size" : "fixed",
+                        "flex-width" : 0,
+                        "flex-wrap" : "nowrap",
+                        "iconClass" : "widgets-flexcontainer-fixed",
+                        "isLocked" : false,
+                        "justify-content" : "flex-start",
+                        "positioning" : "responsive",
+                        "userCannotRemove" : false
+                      },
+                      "Widgets" : [ ]
+                    }, {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "DisplayName" : "Body",
+                        "EnableExpandCollapse" : false,
+                        "ExpandCollapseTabLocation" : "inside",
+                        "Expanded" : true,
+                        "Id" : "flexcontainer-6",
+                        "LastContainer" : true,
+                        "Overlay" : false,
+                        "ResponsiveLayout" : false,
+                        "ShowDataLoading" : true,
+                        "ShowExpandCollapseTab" : false,
+                        "SourceURL" : "",
+                        "Style" : "DefaultContainerStyle",
+                        "StyleProperties" : { },
+                        "Type" : "flexcontainer",
+                        "UseTheme" : true,
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Flex Container",
+                        "align-content" : "flex-start",
+                        "align-items" : "flex-start",
+                        "flex-basis" : "auto",
+                        "flex-direction" : "column",
+                        "flex-grow" : 1,
+                        "flex-height" : 0,
+                        "flex-max-height" : "",
+                        "flex-max-width" : "",
+                        "flex-min-height" : "",
+                        "flex-min-width" : "",
+                        "flex-shrink" : 0,
+                        "flex-size" : "default",
+                        "flex-width" : 0,
+                        "flex-wrap" : "nowrap",
+                        "iconClass" : "widgets-flexcontainer",
+                        "isLocked" : true,
+                        "justify-content" : "flex-start",
+                        "positioning" : "responsive",
+                        "userCannotRemove" : false
+                      },
+                      "Widgets" : [ {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "DisplayName" : "container-9",
+                          "EnableExpandCollapse" : false,
+                          "ExpandCollapseTabLocation" : "inside",
+                          "Expanded" : true,
+                          "Id" : "flexcontainer-9",
+                          "LastContainer" : false,
+                          "Overlay" : false,
+                          "ResponsiveLayout" : false,
+                          "ShowDataLoading" : true,
+                          "ShowExpandCollapseTab" : false,
+                          "SourceURL" : "",
+                          "Style" : "DefaultContainerStyle",
+                          "StyleProperties" : { },
+                          "Type" : "flexcontainer",
+                          "UseTheme" : true,
+                          "Visible" : true,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Responsive Container",
+                          "align-content" : "flex-start",
+                          "align-items" : "flex-start",
+                          "flex-basis" : "auto",
+                          "flex-direction" : "row",
+                          "flex-grow" : 1,
+                          "flex-max-height" : "276px",
+                          "flex-max-width" : "",
+                          "flex-min-height" : "276px",
+                          "flex-min-width" : "",
+                          "flex-shrink" : 1,
+                          "flex-size" : "fixed",
+                          "flex-wrap" : "nowrap",
+                          "iconClass" : "widgets-flexcontainer-fixed",
+                          "isLocked" : false,
+                          "justify-content" : "flex-start",
+                          "positioning" : "responsive",
+                          "userCannotRemove" : false
+                        },
+                        "Widgets" : [ {
+                          "Properties" : {
+                            "Alignment" : "left",
+                            "Area" : "UI",
+                            "ClickOutsideToClose" : false,
+                            "DisplayName" : "navigation-11",
+                            "FixedPopupHeight" : 200,
+                            "FixedPopupWidth" : 400,
+                            "Height" : 30,
+                            "Icon" : "",
+                            "IconAlignment" : "left",
+                            "Id" : "navigation-11",
+                            "LastContainer" : false,
+                            "Left" : 239,
+                            "Margin" : "5",
+                            "MashupName" : "ColdChainAlertMashup_1",
+                            "MashupParameters" : [ ],
+                            "MessageToShow" : "Mashup must be selected",
+                            "ModalPopupOpacity" : 0.5,
+                            "NavigationActiveStyle" : "DefaultNavigationActiveStyle",
+                            "NavigationFocusStyle" : "DefaultNavigationFocusStyle",
+                            "NavigationHoverStyle" : "DefaultNavigationHoverStyle",
+                            "PopupScrolling" : "auto",
+                            "PopupTitle" : "Alert",
+                            "PopupTitleStyle" : "DefaultPopupTitleStyle",
+                            "ReloadOnReplace" : false,
+                            "ResponsiveLayout" : false,
+                            "RoundedCorners" : true,
+                            "ShowCloseButton" : true,
+                            "ShowDataLoading" : true,
+                            "ShowMessageIfNoMashup" : false,
+                            "SingleClickSelectOnTablets" : true,
+                            "Style" : "DefaultNavigationStyle",
+                            "TabSequence" : 0,
+                            "TargetWindow" : "modal-popup",
+                            "Text" : "Mashup Link",
+                            "ToolTipField" : "",
+                            "ToolTipStyle" : "DefaultTooltipStyle",
+                            "Top" : 81,
+                            "Transparent" : false,
+                            "Type" : "navigation",
+                            "Visible" : true,
+                            "Width" : 200,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Navigation",
+                            "__supportsTooltip" : true
+                          },
+                          "Widgets" : [ ]
+                        }, {
+                          "Properties" : {
+                            "ActiveStyle" : "DefaultButtonActiveStyle",
+                            "Area" : "UI",
+                            "CancelConfirmationButton" : "button2",
+                            "ConfirmationButton1Label" : "Yes",
+                            "ConfirmationButton2Label" : "No",
+                            "ConfirmationPrompt" : "Do Action?",
+                            "ConfirmationRequired" : false,
+                            "ConfirmationTitle" : "Confirm Action",
+                            "ContextId" : "",
+                            "DefaultConfirmationButton" : "button1",
+                            "Disabled" : false,
+                            "DisabledStyle" : "DefaultButtonDisabledStyle",
+                            "DisplayName" : "button-18",
+                            "FocusStyle" : "DefaultButtonFocusStyle",
+                            "Height" : 30,
+                            "HoverStyle" : "DefaultButtonHoverStyle",
+                            "IconAlignment" : "left",
+                            "Id" : "button-18",
+                            "Label" : "Button",
+                            "LastContainer" : false,
+                            "Left" : 427,
+                            "Margin" : "5",
+                            "ResponsiveLayout" : false,
+                            "RoundedCorners" : true,
+                            "ShowDataLoading" : true,
+                            "SingleClickSelectOnTablets" : true,
+                            "Style" : "DefaultButtonStyle",
+                            "TabSequence" : 0,
+                            "ToolTipField" : "",
+                            "ToolTipStyle" : "DefaultTooltipStyle",
+                            "Top" : 126,
+                            "Type" : "button",
+                            "Visible" : true,
+                            "Width" : 75,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Button",
+                            "__supportsTooltip" : true
+                          },
+                          "Widgets" : [ ]
+                        } ]
+                      }, {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "DisplayName" : "container-8",
+                          "EnableExpandCollapse" : false,
+                          "ExpandCollapseTabLocation" : "inside",
+                          "Expanded" : true,
+                          "Id" : "flexcontainer-8",
+                          "LastContainer" : true,
+                          "Overlay" : false,
+                          "ResponsiveLayout" : false,
+                          "ShowDataLoading" : true,
+                          "ShowExpandCollapseTab" : false,
+                          "SourceURL" : "",
+                          "Style" : "DefaultContainerStyle",
+                          "StyleProperties" : { },
+                          "Type" : "flexcontainer",
+                          "UseTheme" : true,
+                          "Visible" : true,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Flex Container",
+                          "align-content" : "flex-start",
+                          "align-items" : "flex-start",
+                          "flex-basis" : "auto",
+                          "flex-direction" : "row",
+                          "flex-grow" : 1,
+                          "flex-height" : 0,
+                          "flex-max-height" : "",
+                          "flex-max-width" : "",
+                          "flex-min-height" : "",
+                          "flex-min-width" : "",
+                          "flex-shrink" : 0,
+                          "flex-size" : "default",
+                          "flex-width" : 0,
+                          "flex-wrap" : "nowrap",
+                          "iconClass" : "widgets-flexcontainer",
+                          "isLocked" : true,
+                          "justify-content" : "flex-start",
+                          "positioning" : "responsive",
+                          "userCannotRemove" : false
+                        },
+                        "Widgets" : [ ]
+                      } ]
+                    } ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "Footer",
+                      "EnableExpandCollapse" : false,
+                      "ExpandCollapseTabLocation" : "inside",
+                      "Expanded" : true,
+                      "Id" : "flexcontainer-3",
+                      "LastContainer" : false,
+                      "Overlay" : false,
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "SourceURL" : "",
+                      "Style" : "DefaultContainerStyle",
+                      "StyleProperties" : { },
+                      "Type" : "flexcontainer",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Flex Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "flex-start",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : 1,
+                      "flex-height" : 0,
+                      "flex-max-height" : "17px",
+                      "flex-max-width" : "",
+                      "flex-min-height" : "17px",
+                      "flex-min-width" : "",
+                      "flex-shrink" : 0,
+                      "flex-size" : "fixed",
+                      "flex-width" : 0,
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer-fixed",
+                      "isLocked" : false,
+                      "justify-content" : "flex-start",
+                      "positioning" : "responsive",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : true,
+                    "DisplayName" : "HighTemp",
+                    "Expression" : "if(Temperature ==true){\n    output = true;\n}\nelse{\n    output =false;\n}",
+                    "Height" : 28,
+                    "Id" : "validator-13",
+                    "LastContainer" : false,
+                    "Left" : null,
+                    "Output" : true,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : null,
+                    "Type" : "validator",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Validator",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "BOOLEAN",
+                      "DefaultValue" : false,
+                      "Description" : "",
+                      "ParameterName" : "Temperature",
+                      "bindingDirection" : "Target",
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "HighTempStatusMsg",
+                    "Height" : 28,
+                    "Id" : "statusmessage-14",
+                    "LastContainer" : false,
+                    "Left" : null,
+                    "Message" : "High Temperature !!!",
+                    "MessageType" : "warning",
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : null,
+                    "Type" : "statusmessage",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Status Message"
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "mashupTemplate"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>
